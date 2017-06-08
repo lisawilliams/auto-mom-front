@@ -22,7 +22,8 @@ Project Setup Checklist
 3. api.js for sign-up *DONE*
 4. ui.js for sign-up *DONE*
 5. Test that you can successfully sign up via web UI *DONE*
-6. Confirm that new user exists in back-end DB *DONE*
+6. Confirm that request ran on backend with appropriate HTTP status code *DONE* (Returns 201 Created as expected)
+7. Confirm that new user exists in back-end DB *DONE*
 
 ### Get Sign-In working
 
@@ -31,16 +32,16 @@ Project Setup Checklist
 3. api.js for sign-in *DONE*
 4. ui.js for sign-in *DONE*
 5. Test that you can sign in via web UI *DONE*
-6. Confirm that request ran on backend with appropriate HTTP status code *DONE*
+6. Confirm that request ran on backend with appropriate HTTP status code *DONE* (Returns 200 OK as expected)
 
 ### Get Sign-Out working
 
-1. HTML for sign-out
-2. events.js for sign-out
-3. api.js for sign-out
-4. ui.js for sign-out
-5. Test that you can sign out via web UI
-6. Confirm that request ran on backend with appropriate HTTP status code
+1. HTML for sign-out *DONE*
+2. events.js for sign-out *DONE*
+3. api.js for sign-out *DONE*
+4. ui.js for sign-out *DONE*
+5. Test that you can sign out via web UI *DONE*
+6. Confirm that request ran on backend with appropriate HTTP status code *DONE* (Returns 204 No Content as expected)
 
 ### Get Change-Password Working
 
@@ -50,6 +51,8 @@ Project Setup Checklist
 4. ui.js for change-password
 5. Test that you can change password via web UI (sign in with new password)
 6. Confirm that request ran on backend with appropriate HTTP status code
+
+## Get Auth Features Working in Production Environment
 
 
 ## Upcoming
@@ -124,11 +127,18 @@ Project Setup Checklist
 7. Confirm that the chore no longer exists in the backend DB
 
 
-## Potential future actions:
+## Future
+
+### Nice to have
 
 * Dependent-destroy chores when a user is gone.
 * Hide/show auth from user at appropriate points.
+
+### Must have
+
 * Show a list of all a user's chores
+* User-facing error messages for auth problems
+* User-facing error messages for chore-CRUD action problems
 
 ## Questions:
 
