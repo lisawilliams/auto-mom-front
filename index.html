@@ -1,89 +1,124 @@
 <!DOCTYPE html>
 <html>
+    <head>
+      <title>AutoMom</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<head>
-  <title>AutoMom</title>
+      <!-- Do not add `link` tags unless you know what you are doing -->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-  <div class="app">
-    <div class="">
-    <p class="login intro">AutoMom: Your Source of Mom Wisdom & Household Procedures</p>
+      <!-- Do not add `script` tags unless you know what you are doing -->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body class="container-fluid">
+      <h1>AutoMom</h1>
+
+
+      <div class="container">
+        <div class="row article">
+          <div class="col-md-12 text-center box">
+<!-- OLD Sign-in form WITH MODAL -->
+
+<!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#sign-up-modal">
+  Sign up
+</button> -->
+
+<!-- Modal -->
+
+<!-- <fieldset>
+Format for passing signup values to API
+<legend>Sign up!</legend>
+<input type="text" name="credentials[email]" value="" placeholder="email">
+<input type="password" name="credentials[password]" value="" placeholder="password">
+<input type="password" name="credentials[password_confirmation]" value="" placeholder="password confirmation">
+<input type="submit" name="submit" value="Sign up!">
+</fieldset>
+</form> -->
+<!-- <div class="modal fade" id="sign-up-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myMod">Sign Up</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal" id="sign-up-form">
+        <div class="form-group">
+          <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" name="credentials[email]" placeholder="Email">
+          </div>
+          <label for="createPassword" class="col-sm-2 control-label">Password</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
+          </div>
+          <label for="passwordConfirm" class="col-sm-2 control-label">Password Confirmation</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" name="credentials[password_confirmation]" placeholder="Password">
+          </div>
+          <div class="col-sm-offset-2 col-sm-10">
+            <input type="submit" id="sign-up" class="btn btn-default"></input>
+          </div>
+        </div>
+      </form>
+      </div> -->
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+    <!-- </div>
   </div>
+</div> -->
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Do not add `link` tags unless you know what you are doing -->
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-
-  <!-- Do not add `script` tags unless you know what you are doing -->
-  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-</head>
-
-<body class="container-fluid">
-  <div class="container">
-
-<div class="auth">
-  <form class="login" id="sign-in">
+<form id="sign-up">
     <fieldset>
-      <span class="larger">Sign In:</span>
-      <label>
-        Email
-        <input type="text" name="credentials[email]">
-      </label>
-      <label>
-        Password
-        <input class="password" type="password" name="credentials[password]">
-      </label>
-      <input type="submit" name="submit" value="Sign In">
-    </fieldset>
-  </form>
-
-  <form class="login" id="sign-up">
-    <fieldset>
-      <span class="larger">Sign Up:</span>
-        <label>
-          Email
-          <input type="text" name="credentials[email]">
-        </label>
-        <label>
-          Password
-          <input class="password" type="password" name="credentials[password]">
-        </label>
-        <label>
-          Password Confirmation
-          <input class="password" type="password" name="credentials[password_confirmation]">
-        </label>
-      <input type="submit" name="submit" value="Sign Up">
-    </fieldset>
-  </form>
+      <h2>Sign up</h2>
+      <input type="text" name="credentials[email]" value="" placeholder="email">
+      <input type="password" name="credentials[password]" value="" placeholder="password">
+      <input type="password" name="credentials[password_confirmation]" value="" placeholder ="password confirmation">
+      <input type="submit" name="submit" value="Sign up">
+      <div id ="prompt"></div>
+    </fieldset></form>
 
 
+            <form id="sign-in">
+              <!-- Used to be sign-in-form -->
+                <fieldset>
+                  <h2>Sign in</h2>
+                  <input type="text" name="credentials[email]" value="" placeholder="email">
+                  <input type="password" name="credentials[password]" value="" placeholder="password">
+                  <input type="submit" name="submit" value="Sign in">
+                  <div id ="prompt"></div>
+                </fieldset>
+</form>
 
-  <form class="userstuff" id="change-password">
-    <fieldset>
-      <span class="larger">Change Password:</span>
-        <label>
-          Current Password
-          <input class="password" type="password" name="passwords[old]">
-        </label>
-        <label>
-          New Password
-          <input class="password" type="password" name="passwords[new]">
-        </label>
-      <input type="submit" name="submit" value="Change Password">
-    </fieldset>
-  </form>
 
-  <form class="userstuff" id="sign-out">
-    <fieldset>
-      <input type="submit" name="submit" value="Sign Out">
-    </fieldset>
-  </form>
+              <h2>Sign out</h2>
+                  <form id="sign-out">
+                    <!-- Temporarily commenting this out to see what happens -->
+                    <!-- <input type ='text' name='user[id]' placeholder ='User ID Here'> -->
+                      <input type="submit" name="submit" value="Sign Out">
+                  </form>
+
+
+            <form id="change-password">
+             <fieldset>
+               <legend>Change Password</legend>
+               <input type="text" name="passwords[old]" id="change-password-old" placeholder="Old Password">
+               <input type="password" name="passwords[new]" id="change-password-new" placeholder="New Password">
+               <input type="submit" name="submit" value="Change Password!">
+             </fieldset>
+           </form>
+
+
+          </div>
+
+          </div>
+        </div>
+  </div>
 </div>
 
-<!-- see auto-mom-front-backup for additional items -->
-</div>
-</div>
-</body>
 
+    </body>
 </html>

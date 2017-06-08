@@ -12,11 +12,45 @@ Project Setup Checklist
 * *DONE* Make sure bin/rails server and bin/rails console both work.
 
 
-## Thursday, June 8, 2017: Get Auth functions working
+## Thursday, June 8, 2017: Get Auth functions working on localhost
 
 1. *DONE* Set up HTML for auth functions
-2. events.js for auth functions
-3. api.js for auth functions
-4. ui.js for auth functions
-5. Write curl scripts (grab curl scripts from auto_mom_back as we have some written that work)
-6. Test each function (sign up, sign in, chg password, sign out)
+
+### Get Sign-up working
+1. HTML for sign-up *DONE*
+2. events.js for sign-up *DONE*
+3. api.js for sign-up *DONE*
+4. ui.js for sign-up *DONE*
+
+### Get Sign-In working
+
+1. HTML for sign-in
+2. events.js for sign-in
+3. api.js for sign-in
+4. ui.js for sign-in
+
+
+### Get Sign-Out working
+
+1. HTML for sign-out
+2. events.js for sign-out
+3. api.js for sign-out
+4. ui.js for sign-out
+
+### Get Change-Password Working
+
+1. HTML for change-password
+2. events.js for change-password
+3. api.js for change-password
+4. ui.js for change-password
+
+
+errors:
+jquery.js:3869 Uncaught TypeError: Cannot read property 'development' of undefined
+    at setAPIOrigin (set-api-origin.js:26)
+    at HTMLDocument.<anonymous> (index.js:7)
+    at mightThrow (jquery.js:3583)
+    at process (jquery.js:3651)
+﻿
+
+​
