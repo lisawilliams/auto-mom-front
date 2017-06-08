@@ -32,11 +32,19 @@ const onSignOut = function (event) {
   .catch(ui.signOutFailure)
 }
 
+const onChangePassword = function (event) {
+  event.preventDefault()
+  const data = getFormFields(this)
+  api.changePassword(data)
+    .then(ui.changePasswordSuccess)
+    .catch(ui.changePasswordFailure)
+}
+
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
   $('#sign-out').on('submit', onSignOut)
-  // $('#change-password').on('submit', onChangePassword)
+  $('#change-password').on('submit', onChangePassword)
 }
 
 module.exports = {
@@ -44,6 +52,6 @@ module.exports = {
   addHandlers,
   onSignIn,
   // postSignInSuccess,
-  onSignOut
-  // onChangePassword
+  onSignOut,
+  onChangePassword
 }

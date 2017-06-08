@@ -45,12 +45,12 @@ Project Setup Checklist
 
 ### Get Change-Password Working
 
-1. HTML for change-password
-2. events.js for change-password
-3. api.js for change-password
-4. ui.js for change-password
-5. Test that you can change password via web UI (sign in with new password)
-6. Confirm that request ran on backend with appropriate HTTP status code
+1. HTML for change-password *DONE*
+2. events.js for change-password *DONE*
+3. api.js for change-password *DONE*
+4. ui.js for change-password *DONE*
+5. Test that you can change password via web UI (sign in with new password) *DONE*
+6. Confirm that request ran on backend with appropriate HTTP status code *DONE*
 
 ## Get Auth Features Working in Production Environment
 
