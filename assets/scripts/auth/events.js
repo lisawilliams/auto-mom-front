@@ -14,17 +14,26 @@ const onSignUp = function (event) {
     .then(ui.onAddUserSuccess)
     .catch(ui.onAddUserFailure)
 }
+
+const onSignIn = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.postSignIn(data)
+    .then(ui.onSignInSuccess)
+    .catch(ui.onSignInFailure)
+}
+
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
-  // $('#sign-in').on('submit', onSignIn)
+  $('#sign-in').on('submit', onSignIn)
   // $('#sign-out').on('submit', onSignOut)
   // $('#change-password').on('submit', onChangePassword)
 }
 
 module.exports = {
   onSignUp,
-  addHandlers
-  // onSignIn,
+  addHandlers,
+  onSignIn
   // postSignInSuccess,
   // onSignOut,
   // onChangePassword

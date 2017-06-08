@@ -44,7 +44,7 @@ const onSignInSuccess = (response) => {
   console.log(response)
   store.user = response.user
   console.log('store.user console log data is ' + store.user)
-  resetForm($('#sign-in-form'))
+  resetForm($('#sign-in'))
   console.log('Is the form empty now?')
 }
 

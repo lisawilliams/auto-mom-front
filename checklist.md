@@ -21,14 +21,17 @@ Project Setup Checklist
 2. events.js for sign-up *DONE*
 3. api.js for sign-up *DONE*
 4. ui.js for sign-up *DONE*
+5. Test that you can successfully sign up via web UI *DONE*
+6. Confirm that new user exists in back-end DB *DONE*
 
 ### Get Sign-In working
 
-1. HTML for sign-in
-2. events.js for sign-in
-3. api.js for sign-in
-4. ui.js for sign-in
-
+1. HTML for sign-in *DONE*
+2. events.js for sign-in *DONE*
+3. api.js for sign-in *DONE*
+4. ui.js for sign-in *DONE*
+5. Test that you can sign in via web UI *DONE*
+6. Confirm that request ran on backend with appropriate HTTP status code *DONE*
 
 ### Get Sign-Out working
 
@@ -36,6 +39,8 @@ Project Setup Checklist
 2. events.js for sign-out
 3. api.js for sign-out
 4. ui.js for sign-out
+5. Test that you can sign out via web UI
+6. Confirm that request ran on backend with appropriate HTTP status code
 
 ### Get Change-Password Working
 
@@ -43,14 +48,92 @@ Project Setup Checklist
 2. events.js for change-password
 3. api.js for change-password
 4. ui.js for change-password
+5. Test that you can change password via web UI (sign in with new password)
+6. Confirm that request ran on backend with appropriate HTTP status code
 
 
-errors:
-jquery.js:3869 Uncaught TypeError: Cannot read property 'development' of undefined
-    at setAPIOrigin (set-api-origin.js:26)
-    at HTMLDocument.<anonymous> (index.js:7)
-    at mightThrow (jquery.js:3583)
-    at process (jquery.js:3651)
+## Upcoming
+
+### Rails Backend work
+
+### User
+
+1. Scaffold user *DONE*
+2. Run bin/rails db:migrate *DONE*
+3. Test that you can add a user via rails console *DONE*
+4. Test that you can add a user via a curl request *DONE*
+5. Confirm that users you add via curl/console exist in database *DONE*
+
+### Chores
+
+1. Scaffold chore resource *DONE*
+2. Run bin/rails db:migrate *DONE*
+3. Test that you can add a chore via rails console *DONE*
+4. Test that you can add a chore via a curl request *DONE*
+
+
+### Join Table users-have-chores
+
+1. Research scaffolding statement for join table
+2. Confirm with consultants that your scaffolding command is correct
+3. Create users-have-chores resource
+4. Test that you can add a chore to a user via rails console
+
+
+
+### CRUD Actions
+
+### Create
+
+1. HTML for create-chore
+2. events.js for create-chore
+3. api.js for create-chore
+4. ui.js for create-chore
+5. Test that you can create a chore via the Web UI
+6. Confirm that request ran on backend with appropriate HTTP status code
+7. Confirm that the chore exists in the backend DB
+
+
+### Read
+
+1. HTML for show one chore
+2. events.js for show one chore
+3. api.js for show one chore
+4. ui.js for show one chore
+5. Test that you can display a chore via the Web UI
+6. Confirm that request ran on backend with appropriate HTTP status code
+
+### Update
+
+1. HTML for update a chore
+2. events.js for update a chore
+3. api.js for update a chore
+4. ui.js for update a chore
+5. Test that you can update a chore via the Web UI
+6. Confirm that request ran on backend with appropriate HTTP status code
+7. Confirm that the chore has changed in the backend DB
+
+### Update
+
+1. HTML for delete a chore
+2. events.js for delete a chore
+3. api.js for delete a chore
+4. ui.js for delete a chore
+5. Test that you can delete a chore via the Web UI
+6. Confirm that request ran on backend with appropriate HTTP status code
+7. Confirm that the chore no longer exists in the backend DB
+
+
+## Potential future actions:
+
+* Dependent-destroy chores when a user is gone.
+* Hide/show auth from user at appropriate points.
+* Show a list of all a user's chores
+
+## Questions:
+
+* I have questions about how to use the tokens along with the CRUD actions. I'm not sure how it works.
+
 ﻿
 
 ​
