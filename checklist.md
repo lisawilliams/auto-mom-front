@@ -1,4 +1,4 @@
-Project Setup Checklist
+# Project Setup Checklist
 
 ## Wednesday, June 7, 2017: Project Setup
 
@@ -54,6 +54,17 @@ Project Setup Checklist
 
 ## Get Auth Features Working in Production Environment
 
+1. Merge development branch with master branch. *DONE*
+2. Run `grunt deploy`. *DONE*
+3. Confirm that front-end is updated. *DONE*
+4. Wake up Heroku dyno (run heroku restart at command line)
+5. Follow directions [here](https://git.generalassemb.ly/ga-wdi-boston/rails-heroku-setup-guide) to push code to the Heroku app.
+6. Confirm that Heroku settings are correct.
+7. Confirm that server is running via logs in Heroku's Web UI.
+8. Change to .production in config.apiOrigins.
+9. Sign up a new user.
+10. Test that the request ran on backend with appropriate HTTP status code.
+11. Check that new user exists in Heroku DB.
 
 ## Upcoming
 
