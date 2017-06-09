@@ -8,7 +8,10 @@ const store = require('./../store')
 
 const post = function (data) {
   return $.ajax({
-    url: config.apiOrigins.development + '/sign-up',
+
+    // Uncomment the one you need depending on if you are running local or public
+    // url: config.apiOrigins.development + '/sign-up',
+    url: config.apiOrigins.production + '/sign-up',
     method: 'POST',
     data
   })
@@ -16,7 +19,9 @@ const post = function (data) {
 
 const postSignIn = function (data) {
   return $.ajax({
-    url: config.apiOrigins.development + '/sign-in',
+    // Uncomment the one you need depending on if you are running local or public
+    // url: config.apiOrigins.development + '/sign-in',
+    url: config.apiOrigins.production + '/sign-in',
     method: 'POST',
     data
   })
@@ -24,7 +29,9 @@ const postSignIn = function (data) {
 
 const signOut = () => {
   return $.ajax({
-    url: config.apiOrigins.development + '/sign-out/' + store.user.id,
+    // Uncomment the one you need depending on if you are running local or public
+    // url: config.apiOrigins.development + '/sign-out/' + store.user.id,
+    url: config.apiOrigins.production + '/sign-out/' + store.user.id,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -35,7 +42,9 @@ const signOut = () => {
 const changePassword = (data) => {
   console.log('data is ', data)
   return $.ajax({
-    url: config.apiOrigins.development + '/change-password/' + store.user.id,
+    // Uncomment the one you need depending on if you are running local or public
+    // url: config.apiOrigins.development + '/change-password/' + store.user.id,
+    url: config.apiOrigins.production + '/change-password/' + store.user.id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token

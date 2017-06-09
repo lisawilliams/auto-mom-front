@@ -185,20 +185,22 @@
 
 1. Start a terminal with 'Basic' settings (white terminal window).
 2. `cd wdi/projects/auto-mom/auto-mom-front`
-3. `git checkout master` and make sure that master and development branches are equal if you need them to be
-3. `grunt deploy`
-4. Visit [http://lisawilliams.github.io/auto-mom-front]
+3. Be sure the API requests will be directed toward the Heroku backend rather than the lochalhost Rails server. In /auth/api.js make sure the lines read `url: config.apiOrigins.production`. There's a line for the development API origin and the production API origin. Make sure the production API origin line is uncommented and the development one is commented out.
+4. Git add and commit any files. Then `git push origin development`
+5. `git checkout master` and make sure that master and development branches are equal if you need them to be
+6. `grunt deploy` You will get a warning if you haven't committed all changes on both the dev and master branches.
+7. Visit [http://lisawilliams.github.io/auto-mom-front]
 
 ### Public Back End
 
 1. Start a terminal with 'Ocean' settings (blue terminal window).
 2. `cd wdi/projects/auto-mom/auto-mom-back`
-3. `git checkout master` and make sure that master and development branches are equal if you need them to be
-4. `git push heroku master`
-5. If you need to, also run `heroku run rake db:migrate` and `heroku run rake db:seed`
-6. Visit https://auto-mom-back.herokuapp.com/
-7. To see logs, visit https://dashboard.heroku.com/apps/auto-mom-back/logs
-8. To see a psql terminal on your Heroku server, run `heroku pg:psql`
+4. `git checkout master` and make sure that master and development branches are equal if you need them to be
+5. `git push heroku master`
+6. If you need to, also run `heroku run rake db:migrate` and `heroku run rake db:seed`
+7. Visit https://auto-mom-back.herokuapp.com/
+8. To see logs, visit https://dashboard.heroku.com/apps/auto-mom-back/logs
+9. To see a psql terminal on your Heroku server, run `heroku pg:psql`
 
 For other Heroku details, see the [GA Heroku Rails Setup Guide](https://github.com/ga-wdi-boston/rails-heroku-setup-guide#check-your-work)
 
