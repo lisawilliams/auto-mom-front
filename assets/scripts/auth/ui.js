@@ -28,7 +28,7 @@ const failure = (error) => {
 const onAddUserSuccess = (response) => {
   console.log('yayyyyy we did it')
   console.log(response)
-  resetForm($('#sign-in'))
+  resetForm($('#sign-up'))
   console.log('Is the form empty now?')
   $('#addUserSuccessPrompt').text('You have signed up!')
 }
