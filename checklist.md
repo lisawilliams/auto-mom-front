@@ -155,6 +155,7 @@ the production versions of the front and back end of the AutoMom app.
 ## Questions:
 
 * I have questions about how to use the tokens along with the CRUD actions. I'm not sure how it works.
+* My models/curl requests for "chore" don't include passing a user token. Is that necessary and if so how can I change them if I have already run the migrations?
 
 
 ## Starting Local & Public Apps & Pushing Changes To Them
