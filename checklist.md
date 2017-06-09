@@ -59,12 +59,15 @@
 3. Confirm that front-end is updated. *DONE*
 4. Wake up Heroku dyno (run heroku restart at command line)
 5. Follow directions [here](https://git.generalassemb.ly/ga-wdi-boston/rails-heroku-setup-guide) to push code to the Heroku app.
-6. Confirm that Heroku settings are correct.
-7. Confirm that server is running via logs in Heroku's Web UI.
-8. Change to .production in config.apiOrigins.
-9. Sign up a new user.
-10. Test that the request ran on backend with appropriate HTTP status code.
-11. Check that new user exists in Heroku DB.
+6. Confirm that Heroku settings are correct. *DONE*
+7. Confirm that server is running via logs in Heroku's Web UI. *DONE*
+8. Change to .production in config.apiOrigins. *DONE*
+9. Sign up a new user. *DONE*
+10. Test that the request ran on backend with appropriate HTTP status code. *DONE*
+11. Check that new user exists in Heroku DB. *DONE*
+
+See Starting Up Local & Public Apps below for information on how to start & run
+the production versions of the front and back end of the AutoMom app. 
 
 ## Upcoming
 
@@ -153,7 +156,7 @@
 
 * I have questions about how to use the tokens along with the CRUD actions. I'm not sure how it works.
 
-﻿## Starting up Local & Public Apps
+﻿## Starting Up Local & Public Apps
 
 ### Local
 
