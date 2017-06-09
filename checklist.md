@@ -67,7 +67,7 @@
 11. Check that new user exists in Heroku DB. *DONE*
 
 See Starting Up Local & Public Apps below for information on how to start & run
-the production versions of the front and back end of the AutoMom app. 
+the production versions of the front and back end of the AutoMom app.
 
 ## Upcoming
 
@@ -156,7 +156,8 @@ the production versions of the front and back end of the AutoMom app.
 
 * I have questions about how to use the tokens along with the CRUD actions. I'm not sure how it works.
 
-﻿## Starting Up Local & Public Apps
+
+## Starting Local & Public Apps & Pushing Changes To Them
 
 ### Local
 
