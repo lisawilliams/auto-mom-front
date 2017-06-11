@@ -23,7 +23,7 @@ const failure = (error) => {
 
 // Chore functions
 
-const onCreateChoreSuccess = (response) => {
+const createChoreSuccess = (response) => {
   console.log('yayyyyy we did it')
   console.log(response)
   resetForm($('#create-chore'))
@@ -31,7 +31,7 @@ const onCreateChoreSuccess = (response) => {
   $('#addUserSuccessPrompt').text('You have added a chore!')
 }
 
-const onCreateChoreFailure = (response) => {
+const createChoreFailure = (response) => {
   console.log('boooo it failed')
   console.log(response)
   $('#addChoreFailurePrompt').text('Adding a chore failed. Try again.')
@@ -41,6 +41,6 @@ module.exports = {
   resetForm,
   failure,
   success,
-  onCreateChoreSuccess,
-  onCreateChoreFailure
+  createChoreSuccess,
+  createChoreFailure
 }
