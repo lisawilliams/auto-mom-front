@@ -6,6 +6,8 @@ const store = require('./../store')
 
 // Auth API calls
 
+// Sign up
+
 const post = function (data) {
   return $.ajax({
 
@@ -17,6 +19,8 @@ const post = function (data) {
   })
 }
 
+// Sign in
+
 const postSignIn = function (data) {
   return $.ajax({
     // Uncomment the one you need depending on if you are running local or public
@@ -25,7 +29,10 @@ const postSignIn = function (data) {
     method: 'POST',
     data
   })
+// user data is stored in the corresponding function in ui.js
 }
+
+// Sign out
 
 const signOut = () => {
   return $.ajax({
@@ -38,6 +45,8 @@ const signOut = () => {
     }
   })
 }
+
+// Change password
 
 const changePassword = (data) => {
   console.log('data is ', data)

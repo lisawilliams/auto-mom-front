@@ -12,64 +12,14 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body class="container-fluid">
+
       <h1>AutoMom</h1>
 
 
       <div class="container">
         <div class="row article">
           <div class="col-md-12 text-center box">
-<!-- OLD Sign-in form WITH MODAL -->
 
-<!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#sign-up-modal">
-  Sign up
-</button> -->
-
-<!-- Modal -->
-
-<!-- <fieldset>
-Format for passing signup values to API
-<legend>Sign up!</legend>
-<input type="text" name="credentials[email]" value="" placeholder="email">
-<input type="password" name="credentials[password]" value="" placeholder="password">
-<input type="password" name="credentials[password_confirmation]" value="" placeholder="password confirmation">
-<input type="submit" name="submit" value="Sign up!">
-</fieldset>
-</form> -->
-<!-- <div class="modal fade" id="sign-up-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myMod">Sign Up</h4>
-      </div>
-      <div class="modal-body">
-        <form class="form-horizontal" id="sign-up-form">
-        <div class="form-group">
-          <label for="inputEmail" class="col-sm-2 control-label">Email</label>
-          <div class="col-sm-10">
-            <input type="email" class="form-control" name="credentials[email]" placeholder="Email">
-          </div>
-          <label for="createPassword" class="col-sm-2 control-label">Password</label>
-          <div class="col-sm-10">
-            <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
-          </div>
-          <label for="passwordConfirm" class="col-sm-2 control-label">Password Confirmation</label>
-          <div class="col-sm-10">
-            <input type="password" class="form-control" name="credentials[password_confirmation]" placeholder="Password">
-          </div>
-          <div class="col-sm-offset-2 col-sm-10">
-            <input type="submit" id="sign-up" class="btn btn-default"></input>
-          </div>
-        </div>
-      </form>
-      </div> -->
-      <!-- <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div> -->
-    <!-- </div>
-  </div>
-</div> -->
 
 <form id="sign-up">
     <fieldset>
@@ -83,7 +33,7 @@ Format for passing signup values to API
 
 
             <form id="sign-in">
-              <!-- Used to be sign-in-form -->
+
                 <fieldset>
                   <h2>Sign in</h2>
                   <input type="text" name="credentials[email]" value="" placeholder="email">
@@ -96,8 +46,6 @@ Format for passing signup values to API
 
               <h2>Sign out</h2>
                   <form id="sign-out">
-                    <!-- Temporarily commenting this out to see what happens -->
-                    <!-- <input type ='text' name='user[id]' placeholder ='User ID Here'> -->
                       <input type="submit" name="submit" value="Sign Out">
                   </form>
 
@@ -111,13 +59,28 @@ Format for passing signup values to API
              </fieldset>
            </form>
 
+           <h2> Create a chore</h2>
+           <form id="create-chore">
+             <fieldset>
+          <input type="text" name="chores[chore_name]" id="chore_name" placeholder="Chore name"><br>
+          <textarea cols="25" rows="7" name="chores[directions]" id="directions" placeholder="Write directions here"></textarea><br>
+          <input type="text" name="chores[day_of_week]" id="day_of_week" placeholder="Day of week"><br>
+          <input type="text" name="chores[user_id]" id="user_id" placeholder="User ID"><br>
+          <input type ="submit" name="submit" value="Create chore">
+        </fieldset>
+      </form>
+
+      <BR><BR><BR><BR>
+
+
+
+
+
 
           </div>
 
           </div>
         </div>
-  </div>
-</div>
 
 
     </body>
