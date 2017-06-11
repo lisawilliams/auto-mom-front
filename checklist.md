@@ -87,26 +87,30 @@ the production versions of the front and back end of the AutoMom app.
 2. Run bin/rails db:migrate *DONE*
 3. Test that you can add a chore via rails console *DONE*
 4. Test that you can add a chore via a curl request *DONE*
+5. Test that you can return all of a user's chores via a curl request
+6. Test that you can update a chore via a curl request
+7. Test that you can delete a chore via a curl request
 
 
 ### Join Table users-have-chores
 
-1. Research scaffolding statement for join table
-2. Confirm with consultants that your scaffolding command is correct
-3. Create users-have-chores resource
-4. Test that you can add a chore to a user via rails console
+1. Research scaffolding statement for join table *DONE*
+2. Confirm with consultants that your scaffolding command is correct *DONE*
+3. Create users-have-chores DB migration file *DONE*
+4. Run database migration (bin/rails db:migrate) *DONE*
+4. Test that you can add a chore to a user via rails console *DONE*
 
 ### CRUD Actions
 
 ### Create
 
-1. HTML for create-chore
-2. events.js for create-chore
-3. api.js for create-chore
-4. ui.js for create-chore
-5. Test that you can create a chore via the Web UI
-6. Confirm that request ran on backend with appropriate HTTP status code
-7. Confirm that the chore exists in the backend DB
+1. HTML for create-chore *DONE*
+2. events.js for create-chore *DONE*
+3. api.js for create-chore *DONE*
+4. ui.js for create-chore *DONE*
+5. Test that you can create a chore via the Web UI *DONE*
+6. Confirm that request ran on backend with appropriate HTTP status code *DONE* Returns 201 Created
+7. Confirm that the chore exists in the backend DB in the appropriate tables with all columns filled *DONE*
 
 
 ### Read
@@ -156,6 +160,15 @@ the production versions of the front and back end of the AutoMom app.
 
 * I have questions about how to use the tokens along with the CRUD actions. I'm not sure how it works.
 * My models/curl requests for "chore" don't include passing a user token. Is that necessary and if so how can I change them if I have already run the migrations?
+
+## Running CURL Scripts from the command line
+
+I &#9829; curl scripts. Here's how to run them from the command line:
+
+At the command line: `sh myscript.sh`
+
+I usually run mine from the top level of my project directory, which means I have
+to include the file path. Example: `sh scripts/create-chore-new.sh`
 
 
 ## Starting Local & Public Apps & Pushing Changes To Them
