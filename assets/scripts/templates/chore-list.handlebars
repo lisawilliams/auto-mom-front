@@ -1,0 +1,12 @@
+
+{{#each chore as |chore|}}
+
+<!--we are using data id and not id -->
+<ol id='tog' data-id="{{chore.id}}">
+  <li>Chore ID:{{chore.id}}</li>
+  <li>Directions:{{chore.directions}}</li>
+  <li>Day of Week:{{chore.day_of_week}}</li>
+  <li><button class="clear-list">Make List Disappear Temporarily</button></li>
+</ol>
+
+{{/each}}

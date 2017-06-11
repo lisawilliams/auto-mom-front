@@ -115,12 +115,12 @@ the production versions of the front and back end of the AutoMom app.
 
 ### Read
 
-1. HTML for show one chore
-2. events.js for show one chore
-3. api.js for show one chore
-4. ui.js for show one chore
+1. HTML for show all a user's chore *DONE*
+2. events.js to fire API and UI functions when user pushes "show all chores button"
+3. api.js for show one chore *DONE*
+4. ui.js for show one chore *DONE*
 5. Test that you can display a chore via the Web UI
-6. Confirm that request ran on backend with appropriate HTTP status code
+6. Confirm that request ran on backend with appropriate HTTP status code *DONE*  Returns Completed 200 OK
 
 ### Update
 
@@ -159,7 +159,7 @@ the production versions of the front and back end of the AutoMom app.
 ## Questions:
 
 * I have questions about how to use the tokens along with the CRUD actions. I'm not sure how it works. *ANSWERED* Controllers should inherit from OpenReadController, which handles many of these.
-* My models/curl requests for "chore" don't include passing a user token. Is that necessary and if so how can I change them if I have already run the migrations? *ANSWERED SEE ABOVE* Curl scripts still needed to be updated to pass a token for testing, and API functions similarly have to pass a token along with user form data. See chore/ui.js for examples. 
+* My models/curl requests for "chore" don't include passing a user token. Is that necessary and if so how can I change them if I have already run the migrations? *ANSWERED SEE ABOVE* Curl scripts still needed to be updated to pass a token for testing, and API functions similarly have to pass a token along with user form data. See chore/ui.js for examples.
 
 ## Running CURL Scripts from the command line
 

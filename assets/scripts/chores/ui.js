@@ -1,5 +1,5 @@
 'use strict'
-// const game = require('./game')
+const showChoresTemplate = require('../templates/chore-list.handlebars')
 
 const resetForm = function resetForm ($form) {
   $form.find('input:text, input:password, input:file, select, textarea').val('')
@@ -41,6 +41,8 @@ const showChoreSuccess = (response) => {
   console.log('yayyyyy we did it')
   console.log(response)
   $('#showChoreSuccessPrompt').text('Here are all the chores.')
+  const showChoreList = showChoresTemplate({ chores: data.chores })
+    $('#list').append(showChoreList)
 }
 
 const showChoreFailure = (response) => {
