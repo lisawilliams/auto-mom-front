@@ -11,7 +11,8 @@ const createChore = (data) => {
     method: 'POST',
     headers: {
       Authorization: 'Token token=' + store.user.token
-    }
+    },
+    data
   })
   .then((response) => {
     store.chore = response.chore
