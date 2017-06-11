@@ -37,10 +37,25 @@ const createChoreFailure = (response) => {
   $('#addChoreFailurePrompt').text('Adding a chore failed. Try again.')
 }
 
+const showChoreSuccess = (response) => {
+  console.log('yayyyyy we did it')
+  console.log(response)
+  $('#showChoreSuccessPrompt').text('Here are all the chores.')
+}
+
+const showChoreFailure = (response) => {
+  console.log('boooo it failed')
+  console.log(response)
+  $('#showChoreFailurePrompt').text('Hm. Showing all the chores failed. Try again?')
+}
+
 module.exports = {
   resetForm,
   failure,
   success,
   createChoreSuccess,
-  createChoreFailure
+  createChoreFailure,
+  showChoreSuccess,
+  showChoreFailure
+
 }
