@@ -158,8 +158,8 @@ the production versions of the front and back end of the AutoMom app.
 
 ## Questions:
 
-* I have questions about how to use the tokens along with the CRUD actions. I'm not sure how it works.
-* My models/curl requests for "chore" don't include passing a user token. Is that necessary and if so how can I change them if I have already run the migrations?
+* I have questions about how to use the tokens along with the CRUD actions. I'm not sure how it works. *ANSWERED* Controllers should inherit from OpenReadController, which handles many of these.
+* My models/curl requests for "chore" don't include passing a user token. Is that necessary and if so how can I change them if I have already run the migrations? *ANSWERED SEE ABOVE* Curl scripts still needed to be updated to pass a token for testing, and API functions similarly have to pass a token along with user form data. See chore/ui.js for examples. 
 
 ## Running CURL Scripts from the command line
 
