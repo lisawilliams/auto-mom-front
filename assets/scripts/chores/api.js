@@ -1,7 +1,6 @@
 'use strict'
 
 const config = require('./../config')
-// const app = require('./../app')
 const store = require('./../store')
 
 
@@ -19,6 +18,7 @@ const createChore = (data) => {
   .then((response) => {
     store.chore = response.chore
     console.log(response)
+
   })
 }
 
@@ -32,6 +32,12 @@ const showAllChores = function () {
       Authorization: 'Token token=' + store.user.token
     }
   })
+  .then((response) => {
+    store.chores = response.chores
+    console.log(response)
+    return store
+  })
+
 }
 
 
