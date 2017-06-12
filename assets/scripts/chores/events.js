@@ -33,12 +33,15 @@ const onShowAllChores = function (event) {
 
 const onUpdateChore = function (event) {
   event.preventDefault()
-  const data = getFormFields(event.target)
+  const choreData = getFormFields(event.target)
+  const choreId = choreData.chore.id
   console.log('Below is console.log(event.target)')
   console.log(event.target)
-  api.updateChore(data)
-  console.log('Below is console.log(data)')
-  console.log(data)
+  console.log('Below is console.log(choreData)')
+  console.log(choreData)
+  console.log('Below is console.log (choreData.chore.id)')
+  console.log(choreData.chore.id)
+  api.updateChore(choreId, choreData)
   .then(ui.updateChoreSuccess)
 .catch(ui.updateChoreFailure)
 }
@@ -71,6 +74,6 @@ module.exports = {
   addHandlers,
   onCreateChore,
   onShowAllChores,
-  // onUpdateChore,
+  onUpdateChore,
   onDeleteChore
 }

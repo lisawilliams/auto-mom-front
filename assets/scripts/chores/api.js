@@ -42,21 +42,21 @@ const showAllChores = function () {
 
 // API PATCH, updates a selected chore
 
-// const updateChore = function (data, id) {
-//   console.log(data)
-//   return $.ajax({
-//     url: config.apiOrigin + '/chores/' + id,
-//     method: 'PATCH',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     },
-//     data
-//   })
-//   // .then((response) => {
-//   //   store.chore = response.chore
-//   //   console.log(response)
-//   // })
-// }
+const updateChore = (choreId, choreData) => {
+  console.log('You have reached api.updateChore')
+  console.log('Below is console.log(choreData)')
+  console.log(choreData)
+  console.log('Below is console.log(choreId)')
+  console.log(choreId)
+  return $.ajax({
+    url: config.apiOrigin + '/chores/' + choreId,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    choreData
+  })
+}
 
 // API DELETE, deletes a selected chore
 
@@ -76,6 +76,6 @@ const deleteChore = (id) => {
 module.exports = {
   createChore,
   showAllChores,
-  // updateChore,
+  updateChore,
   deleteChore
 }

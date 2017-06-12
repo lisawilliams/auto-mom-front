@@ -103,11 +103,22 @@
  <input type="text" name="chore[chore_name]" id="chore_name" placeholder="Chore name"><br>
  <textarea cols="25" rows="7" name="chore[directions]" id="directions" placeholder="Write directions here"></textarea><br>
  <input type="text" name="chore[day_of_week]" id="day_of_week" placeholder="Day of week"><br>
- <!-- <input type="text" name="chore[user_id]" id="user_id" placeholder="User ID"><br> -->
- <input type ="submit" name="submit" value="Create chore">
+<input type="text" name="chore[user_id]" id="user_id" placeholder="User ID"><br>
+ <input type ="submit" name="submit" value="Update chore">
 </fieldset>
 </form>
 
+<!-- Schema from backend. Checking to make sure params are right
+
+create_table "chores", force: :cascade do |t|
+  t.string   "chore_name"
+  t.string   "directions"
+  t.string   "day_of_week"
+  t.datetime "created_at",  null: false
+  t.datetime "updated_at",  null: false
+  t.integer  "user_id"
+  t.index ["user_id"], name: "index_chores_on_user_id", using: :btree
+end -->
 
       <BR><BR><BR><BR>
 
