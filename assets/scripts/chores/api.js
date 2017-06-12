@@ -58,15 +58,18 @@ const showAllChores = function () {
 //   })
 // }
 
-const updateChore = function (data, id) {
+const updateChore = function (choreObject, choreNumber) {
+  debugger
+  console.log(store.user.token)
   return $.ajax({
-    url: config.apiOrigin + '/chores/' + data.chore.id,
+    url: config.apiOrigin + '/chores/' + choreNumber,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
-    data
+    data: choreObject
   })
+
 }
 
 // API DELETE, deletes a selected chore

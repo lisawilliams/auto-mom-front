@@ -34,9 +34,18 @@ const onShowAllChores = function (event) {
 const onUpdateChore = function (event) {
   event.preventDefault()
   let data = {}
-  data.chore = getFormFields(event.target)
-  console.log(data.chore)
-  api.updateChore(data, data.chore.id)
+  data.chores = getFormFields(event.target)
+  let choreNumber = (data.chores.chore.id)
+  let choreObject = (data.chores)
+  console.log('this is console.log(data)')
+  console.log(data)
+  console.log('this is console.log(data.chores.chore)')
+  console.log(data.chores.chore)
+  console.log('this is console.log(data.chores.chore.id)')
+  console.log(data.chores.chore.id)
+  console.log('this is console.log(choreNumber)')
+  console.log(choreNumber)
+  api.updateChore(choreObject, choreNumber)
   .then(ui.updateChoreSuccess)
 .catch(ui.updateChoreFailure)
 }
