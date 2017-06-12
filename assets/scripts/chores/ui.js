@@ -58,6 +58,20 @@ const showChoreFailure = (response) => {
 
 // Chore Update
 
+const updateChoreSuccess = (response) => {
+  console.log('yayyyyy we did it')
+  console.log(response)
+  resetForm($('#update-chore'))
+  console.log('Is the form empty now?')
+  $('#updateChoreSuccessPrompt').text('You have updated a chore!')
+}
+
+const updateChoreFailure = (response) => {
+  console.log('boooo it failed')
+  console.log(response)
+  $('#updateChoreFailurePrompt').text('Updating a chore failed. Try again?')
+}
+
 // Chore Delete
 
 const deleteChoreSuccess = (response) => {
@@ -82,9 +96,8 @@ module.exports = {
   createChoreFailure,
   showChoreSuccess,
   showChoreFailure,
-  // updateChoreSuccess,
-  // updateChoreFailure,
+  updateChoreSuccess,
+  updateChoreFailure,
   deleteChoreSuccess,
   deleteChoreFailure
-
 }
