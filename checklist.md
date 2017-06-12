@@ -1,5 +1,12 @@
 # Project Setup Checklist
 
+This is the Full Stack Project I am doing for WDI 18. The goal is to create a
+working Rails app with a Javascript front end that is able to log in users,
+and do all CRUD (Create, Read, Update, Delete) requests. In my case, I am
+doing a chore reminder app.
+
+Project requirements for a satisfactory grade are here: [Full Stack Application Requirements](https://git.generalassemb.ly/ga-wdi-boston/full-stack-project).
+
 ##  Project Setup
 Wednesday, June 7, 2017
 
@@ -142,6 +149,8 @@ Sunday, June 11, 2017
 7. Confirm that the chore has changed in the backend DB
 
 ### Delete
+
+Monday, June 11, 2017
 
 1. HTML for delete a chore *DONE*
 2. events.js for delete a chore *DONE*
