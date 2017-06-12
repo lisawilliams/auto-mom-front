@@ -28,13 +28,33 @@ const onShowAllChores = function (event) {
     .catch(ui.showChoreFailure)
 }
 
+// Update a chore
+
+
+// Delete a chore
+
+
+const onDeleteChore = function (event) {
+  event.preventDefault();
+  let id = getFormFields(event.target)
+  console.log('we have arrived at onDeleteChore chores/events.js')
+  console.log(id)
+  api.deleteChore(id)
+  .then(ui.deleteChoreSuccess)
+  .catch(ui.deleteChoreFailure)
+}
+
+// REMEMBER TO PUT IN # before form ID!
+
 const addHandlers = () => {
   $('#create-chore').on('submit', onCreateChore)
   $('#show-chore').on('submit', onShowAllChores)
+  $('#delete-chore').on('submit', onDeleteChore)
 }
 
 module.exports = {
   addHandlers,
   onCreateChore,
-  onShowAllChores
+  onShowAllChores,
+  onDeleteChore
 }

@@ -43,6 +43,22 @@ const showAllChores = function () {
 
 }
 
+// API PATCH, updates a selected chore
+
+
+// API DELETE, deletes a selected chore
+
+const deleteChore = (id) => {
+  return $.ajax({
+    url: config.apiOrigins.development + '/chores/${id}',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
+
 
 module.exports = {
   createChore,

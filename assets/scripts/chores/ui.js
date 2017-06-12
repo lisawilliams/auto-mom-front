@@ -25,6 +25,8 @@ const failure = (error) => {
 
 // Chore functions
 
+// Chore create
+
 const createChoreSuccess = (response) => {
   console.log('yayyyyy we did it')
   console.log(response)
@@ -39,23 +41,7 @@ const createChoreFailure = (response) => {
   $('#addChoreFailurePrompt').text('Adding a chore failed. Try again.')
 }
 
-// const showChoreSuccess = (response) => {
-//   console.log('yayyyyy we did it we got to ui.js')
-//   console.log(response)
-//   $('#showChoreSuccessPrompt').text('Here are all the chores.')
-//   const showChoreList = showChoresTemplate({ chores: store.chores })
-//     $('#chore-list').append(showChoreList)
-//     console.log('This is after the AJAX call')
-//     console.log(store.chores)
-//
-// }
-
-// const showChoreSuccess = (data) => {
-//   console.log('below is console.log(data) for showChoreSuccess')
-//   console.log(data)
-//   const showChoreList = showChoresTemplate({ chores: data })
-//   $('#chore-list').append(showChoreList)
-// }
+// Chore show
 
 const showChoreSuccess = (response) => {
   console.log('below is console.log(response.chores) for showChoreSuccess')
@@ -64,12 +50,28 @@ const showChoreSuccess = (response) => {
   $('#chore-list').append(showChoreList)
 }
 
-
-
 const showChoreFailure = (response) => {
   console.log('boooo it failed')
   console.log(response)
   $('#showChoreFailurePrompt').text('Hm. Showing all the chores failed. Try again?')
+}
+
+// Chore Update
+
+// Chore Delete
+
+const deleteChoreSuccess = (response) => {
+  console.log('yayyyyy we did it')
+  console.log(response)
+  resetForm($('#delete-chore'))
+  console.log('Is the form empty now?')
+  $('#deleteChoreSuccessPrompt').text('You have deleted a chore!')
+}
+
+const deleteChoreFailure = (response) => {
+  console.log('boooo it failed')
+  console.log(response)
+  $('#deleteChoreFailurePrompt').text('Deleting a chore failed. Try again.')
 }
 
 module.exports = {
@@ -79,6 +81,10 @@ module.exports = {
   createChoreSuccess,
   createChoreFailure,
   showChoreSuccess,
-  showChoreFailure
+  showChoreFailure,
+  // updateChoreSuccess,
+  // updateChoreFailure,
+  deleteChoreSuccess,
+  deleteChoreFailure
 
 }
