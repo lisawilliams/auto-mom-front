@@ -159,16 +159,17 @@ We're gonna need some CSS up in here at some point.
 
 ## Future
 
-### Nice to have
-
-* Dependent-destroy chores when a user is gone.
-* Hide/show auth from user at appropriate points.
 
 ### Must have
 
 * Show a list of all a user's chores *DONE*
 * User-facing error messages for auth problems
 * User-facing error messages for chore-CRUD action problems
+
+### Nice to have
+
+* Dependent-destroy chores when a user is gone.
+* Hide/show auth from user at appropriate points.
 
 ## Questions:
 
