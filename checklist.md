@@ -143,13 +143,15 @@ Sunday, June 11, 2017
 
 ### Delete
 
-1. HTML for delete a chore
-2. events.js for delete a chore
-3. api.js for delete a chore
-4. ui.js for delete a chore
-5. Test that you can delete a chore via the Web UI
-6. Confirm that request ran on backend with appropriate HTTP status code
-7. Confirm that the chore no longer exists in the backend DB
+1. HTML for delete a chore *DONE*
+2. events.js for delete a chore *DONE*
+3. api.js for delete a chore *DONE*
+4. ui.js for delete a chore *DONE*
+5. Test that you can delete a chore via the Web UI *DONE*
+6. Confirm that request ran on backend with appropriate HTTP status code *DONE* Returns 204 No Content as expected
+7. Confirm that the chore no longer exists in the backend DB *DONE*
+
+This one took a little doing, which I documented in the [following issue](https://github.com/ga-wdi-boston/full-stack-project/issues/923).
 
 
 ## Styling
