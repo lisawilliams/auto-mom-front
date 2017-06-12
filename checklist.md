@@ -140,13 +140,17 @@ Sunday, June 11, 2017
 
 ### Update
 
-1. HTML for update a chore
-2. events.js for update a chore
-3. api.js for update a chore
-4. ui.js for update a chore
-5. Test that you can update a chore via the Web UI
-6. Confirm that request ran on backend with appropriate HTTP status code
-7. Confirm that the chore has changed in the backend DB
+Monday, June 11, 2017
+
+1. HTML for update a chore *DONE*
+2. events.js for update a chore *DONE*
+3. api.js for update a chore *DONE*
+4. ui.js for update a chore *DONE*
+5. Test that you can update a chore via the Web UI *DONE*
+6. Confirm that request ran on backend with appropriate HTTP status code *DONE* Returns `Completed 201 Created`
+7. Confirm that the chore has changed in the backend DB *DONE*
+
+A real struggle. Filed [this issue](https://github.com/ga-wdi-boston/full-stack-project/issues/930) and was stuck on it for a long time. Didn't post solution but you can ask me ;)
 
 ### Delete
 

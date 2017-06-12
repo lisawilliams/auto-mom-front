@@ -41,20 +41,31 @@ const showAllChores = function () {
 }
 
 // API PATCH, updates a selected chore
+//
+// const updateChore = (choreId, choreData) => {
+//   console.log('You have reached api.updateChore')
+//   console.log('Below is console.log(choreData)')
+//   console.log(choreData)
+//   console.log('Below is console.log(choreId)')
+//   console.log(choreId)
+//   return $.ajax({
+//     url: config.apiOrigin + '/chores/' + choreId,
+//     method: 'PATCH',
+//     headers: {
+//       Authorization: 'Token token=' + store.user.token
+//     },
+//     choreData
+//   })
+// }
 
-const updateChore = (choreId, choreData) => {
-  console.log('You have reached api.updateChore')
-  console.log('Below is console.log(choreData)')
-  console.log(choreData)
-  console.log('Below is console.log(choreId)')
-  console.log(choreId)
+const updateChore = function (data, id) {
   return $.ajax({
-    url: config.apiOrigin + '/chores/' + choreId,
+    url: config.apiOrigin + '/chores/' + data.chore.id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
-    choreData
+    data
   })
 }
 
