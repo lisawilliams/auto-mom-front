@@ -1,6 +1,7 @@
 # Project Setup Checklist
 
-## Wednesday, June 7, 2017: Project Setup
+##  Project Setup
+Wednesday, June 7, 2017
 
 * *DONE* Download front-end repo, set up with project name, and push to remote repo auto-mom-front
 * *DONE* Test that `grunt server` is working
@@ -12,7 +13,9 @@
 * *DONE* Make sure bin/rails server and bin/rails console both work.
 
 
-## Thursday, June 8, 2017: Get Auth functions working on localhost
+## Get Auth functions working on localhost
+
+Thursday, June 8, 2017
 
 1. *DONE* Set up HTML for auth functions
 
@@ -94,6 +97,8 @@ the production versions of the front and back end of the AutoMom app.
 
 ### Join Table users-have-chores
 
+Friday, June 9
+
 1. Research scaffolding statement for join table *DONE*
 2. Confirm with consultants that your scaffolding command is correct *DONE*
 3. Create users-have-chores DB migration file *DONE*
@@ -103,6 +108,8 @@ the production versions of the front and back end of the AutoMom app.
 ### CRUD Actions
 
 ### Create
+
+Sunday, June 11, 2017
 
 1. HTML for create-chore *DONE*
 2. events.js for create-chore *DONE*
@@ -115,11 +122,13 @@ the production versions of the front and back end of the AutoMom app.
 
 ### Read
 
+Sunday, June 11, 2017
+
 1. HTML for show all a user's chore *DONE*
 2. events.js to fire API and UI functions when user pushes "show all chores button"
-3. api.js for show one chore *DONE*
-4. ui.js for show one chore *DONE*
-5. Test that you can display a chore via the Web UI
+3. api.js for show chore list *DONE*
+4. ui.js for show chore list *DONE*
+5. Test that you can display a chore list via the Web UI *DONE*
 6. Confirm that request ran on backend with appropriate HTTP status code *DONE*  Returns Completed 200 OK
 
 ### Update
@@ -132,7 +141,7 @@ the production versions of the front and back end of the AutoMom app.
 6. Confirm that request ran on backend with appropriate HTTP status code
 7. Confirm that the chore has changed in the backend DB
 
-### Update
+### Delete
 
 1. HTML for delete a chore
 2. events.js for delete a chore
@@ -141,6 +150,11 @@ the production versions of the front and back end of the AutoMom app.
 5. Test that you can delete a chore via the Web UI
 6. Confirm that request ran on backend with appropriate HTTP status code
 7. Confirm that the chore no longer exists in the backend DB
+
+
+## Styling
+
+We're gonna need some CSS up in here at some point.
 
 
 ## Future
@@ -152,7 +166,7 @@ the production versions of the front and back end of the AutoMom app.
 
 ### Must have
 
-* Show a list of all a user's chores
+* Show a list of all a user's chores *DONE*
 * User-facing error messages for auth problems
 * User-facing error messages for chore-CRUD action problems
 

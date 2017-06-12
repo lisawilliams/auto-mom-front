@@ -34,7 +34,10 @@ const showAllChores = function () {
   })
   .then((response) => {
     store.chores = response.chores
+    console.log('This comes from showAllChores in chores/api.js')
     console.log(response)
+    console.log('this is store.chores')
+    console.log(store.chores)
     return store
   })
 

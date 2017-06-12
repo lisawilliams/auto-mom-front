@@ -50,10 +50,17 @@ const createChoreFailure = (response) => {
 //
 // }
 
-const showChoreSuccess = (data) => {
-  console.log('below is console.log(data) for showChoreSuccess')
-  console.log(data)
-  const showChoreList = showChoresTemplate({ chores: data })
+// const showChoreSuccess = (data) => {
+//   console.log('below is console.log(data) for showChoreSuccess')
+//   console.log(data)
+//   const showChoreList = showChoresTemplate({ chores: data })
+//   $('#chore-list').append(showChoreList)
+// }
+
+const showChoreSuccess = (response) => {
+  console.log('below is console.log(response.chores) for showChoreSuccess')
+  console.log(store.chores)
+  const showChoreList = showChoresTemplate({ chores: store.chores })
   $('#chore-list').append(showChoreList)
 }
 
