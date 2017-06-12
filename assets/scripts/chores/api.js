@@ -3,7 +3,6 @@
 const config = require('./../config')
 const store = require('./../store')
 
-
 // API POST, posts a new chore to the db based on user form input
 
 const createChore = (data) => {
@@ -18,7 +17,6 @@ const createChore = (data) => {
   .then((response) => {
     store.chore = response.chore
     console.log(response)
-
   })
 }
 
@@ -40,17 +38,15 @@ const showAllChores = function () {
     console.log(store.chores)
     return store
   })
-
 }
 
 // API PATCH, updates a selected chore
-
 
 // API DELETE, deletes a selected chore
 
 const deleteChore = (id) => {
   return $.ajax({
-    url: config.apiOrigins.development + '/chores/${id}',
+    url: `config.apiOrigins.development/chores/${id}`,
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -58,9 +54,8 @@ const deleteChore = (id) => {
   })
 }
 
-
-
 module.exports = {
   createChore,
-  showAllChores
+  showAllChores,
+  deleteChore
 }

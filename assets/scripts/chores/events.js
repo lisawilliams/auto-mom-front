@@ -23,6 +23,7 @@ const onShowAllChores = function (event) {
   const data = getFormFields(event.target)
   // const data = getFormFields(event.target)
   console.log('made it from event handler to onShowAllChores')
+  console.log(data)
   api.showAllChores()
     .then(ui.showChoreSuccess)
     .catch(ui.showChoreFailure)
@@ -30,12 +31,10 @@ const onShowAllChores = function (event) {
 
 // Update a chore
 
-
 // Delete a chore
 
-
 const onDeleteChore = function (event) {
-  event.preventDefault();
+  event.preventDefault()
   let id = getFormFields(event.target)
   console.log('we have arrived at onDeleteChore chores/events.js')
   console.log(id)
