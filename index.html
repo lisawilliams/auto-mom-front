@@ -21,31 +21,9 @@
 
    <div class="container">
    <div class="row">
-     <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
        <div class="thumbnail">
-         <img src="thumb1.png" alt="...">
          <div class="caption">
-           <h3>Hamburger</h3>
-           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-           <p><a href="#" class="btn btn-primary" role="button">Add to Cart</a></p>
-         </div>
-         </div>
-     </div>
-     <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-       <div class="thumbnail">
-         <img src="thumb2.png" alt="...">
-         <div class="caption">
-           <h3>Polenta</h3>
-           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-           <p><a href="#" class="btn btn-primary" role="button">Add to Cart</a></p>
-         </div>
-       </div>
-     </div>
-     <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-       <!-- <div class="thumbnail">
-         <img src="thumb3.png" alt="...">
-         <div class="caption">
-           <h3>Meatball Sub</h3> -->
            <form id="sign-up">
                <fieldset>
                  <h2>Sign up</h2>
@@ -53,87 +31,71 @@
                  <input type="password" name="credentials[password]" value="" placeholder="password">
                  <input type="password" name="credentials[password_confirmation]" value="" placeholder ="password confirmation">
                  <input type="submit" name="submit" value="Sign up">
-                 <div id ="prompt"></div>
                </fieldset>
            </form>
-           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-           <p><a href="#" class="btn btn-primary" role="button">Add to Cart</a></p>
          </div>
-       </div>
+         </div>
      </div>
-     <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+
+     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
        <div class="thumbnail">
-         <img src="thumb4.jpg" alt="...">
          <div class="caption">
-           <h3>Eggplant</h3>
-           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-           <p><a href="#" class="btn btn-primary" role="button">Add to Cart</a></p>
-         </div>
-       </div>
-     </div>
-   </div>
-   </div>
-
-<div class="container">
-    <div class="row article">
-    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-
-<p>
-<form id="sign-up">
-    <fieldset>
-      <h2>Sign up</h2>
-      <input type="text" name="credentials[email]" value="" placeholder="email">
-      <input type="password" name="credentials[password]" value="" placeholder="password">
-      <input type="password" name="credentials[password_confirmation]" value="" placeholder ="password confirmation">
-      <input type="submit" name="submit" value="Sign up">
-      <div id ="prompt"></div>
-    </fieldset>
-</form>
-</p>
-
-<div class="container">
-  <div class="row article">
-  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-
-<p>
-<form id="sign-in">
-    <fieldset>
-        <h2>Sign in</h2>
-        <input type="text" name="credentials[email]" value="" placeholder="email">
-        <input type="password" name="credentials[password]" value="" placeholder="password">
-        <input type="submit" name="submit" value="Sign in">
-      </fieldset>
-</form>
-</p>
-</div>
-</div>
-</div>
-
-<div class="container">
-  <div class="row article">
-  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-
-<p>
-<h2>Sign out</h2>
-<form id="sign-out">
-        <input type="submit" name="submit" value="Sign Out">
-</form>
-</p>
-
-</div>
-</div>
-</div>
-
-
-                  <h2>Change Password</h2>
-            <form id="change-password">
-             <fieldset>
-               <input type="text" name="passwords[old]" id="change-password-old" placeholder="Old Password">
-               <input type="password" name="passwords[new]" id="change-password-new" placeholder="New Password">
-               <input type="submit" name="submit" value="Change Password!">
-             </fieldset>
+           <form id="sign-in">
+               <fieldset>
+                   <h2>Sign in</h2>
+                   <input type="text" name="credentials[email]" value="" placeholder="email">
+                   <input type="password" name="credentials[password]" value="" placeholder="password">
+                   <input type="submit" name="submit" value="Sign in">
+                 </fieldset>
            </form>
 
+         </div>
+       </div>
+     </div>
+
+
+     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+       <div class="thumbnail">
+
+         <div class="caption">
+           <h2>Sign out</h2>
+           <form id="sign-out">
+                   <input type="submit" name="submit" value="Sign Out">
+           </form>
+         </div>
+       </div>
+     </div>
+   </div>
+   </div>
+
+<div class="container">
+  <div class="row article">
+  <div class="col-lg-12 col-md-12 col-sm-12col-xs-12">
+
+      <h2>Show all chores</h2>
+        <form id="show-chore">
+          <fieldset>
+          <input type ="submit" name="submit" value="Show all chores">
+          </fieldset>
+        </form>
+        <br><br><br>
+
+<!-- Using AJAX to return list of chores in the 'list' div -->
+<!-- This returns the list of chores. chore-list.handlebars targets the "chore-list" div. -->
+ <div id="chore-list">
+
+           </div>
+
+         </div>
+       </div>
+     </div>
+
+
+     <div class="container">
+     <div class="row">
+       <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+         <div class="thumbnail">
+           <div class="caption">
            <h2> Create a chore</h2>
            <form id="create-chore">
              <fieldset>
@@ -144,24 +106,17 @@
           <input type ="submit" name="submit" value="Create chore">
         </fieldset>
       </form>
+
+    </div>
+  </div>
+</div>
+
 <br><br>
-      <h2>Show all chores</h2>
-      <form id="show-chore">
-        <fieldset>
-     <input type ="submit" name="submit" value="Show all chores">
-   </fieldset>
- </form>
-
-<!-- Using AJAX to return list of chores in the 'list' div -->
-<h4>Chore List</h4>
- <div id="chore-list">
-<p>This is test text</p>
-
-           </div>
-
-    <h2>Update a Chore</h2>
 
 
+<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+  <div class="thumbnail">
+    <div class="caption">
   <h2>Delete a Chore</h2>
   <form id="delete-chore">
     <fieldset>
@@ -169,8 +124,13 @@
       <input type="submit" value="Delete chore">
     </fieldset>
   </form>
+</div>
+</div>
+</div>
 
-
+<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+  <div class="thumbnail">
+    <div class="caption">
   <h2> Update a chore</h2>
   <form id="update-chore">
     <fieldset>
@@ -182,6 +142,10 @@
  <input type ="submit" name="submit" value="Update chore">
 </fieldset>
 </form>
+
+</div>
+</div>
+</div>
 
 <!-- Schema from backend. Checking to make sure params are right
 
@@ -198,8 +162,33 @@ end -->
       <BR><BR><BR><BR>
 
 
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <!-- <div class="thumbnail"> -->
+            <!-- <div class="caption"> -->
+              <div class="well">
 
+        <h2>Change Password</h2>
+  <form id="change-password">
+   <fieldset>
+     <input type="text" name="passwords[old]" id="change-password-old" placeholder="Old Password">
+     <input type="password" name="passwords[new]" id="change-password-new" placeholder="New Password">
+     <input type="submit" name="submit" value="Change Password!">
+   </fieldset>
+ </form>
+</div>
+</div>
 
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+  <!-- <div class="thumbnail"> -->
+    <!-- <div class="caption"> -->
+      <div class="well">
+
+<h2>About</h2>
+Made with &#127752; by Lisa Williams.
+See the code for the front end of the AutoMom app <a href ="https://github.com/lisawilliams/auto-mom-front/">here</a>
+See the code for the back end of the AutoMom app <a href ="https://github.com/lisawilliams/auto-mom-back/">here</a>
+</div>
+</div>
 
 
           </div>

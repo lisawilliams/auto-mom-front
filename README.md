@@ -104,6 +104,7 @@ without checking first.
 
 ## Wireframes
 
+[Here is a link to a wireframe I drew for AutoMom](https://github.com/lisawilliams/auto-mom-front/blob/development/Auto-Mom-Wireframe.jpg). 
 
 ## Link to Live, Deployed AutoMom App
 

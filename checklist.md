@@ -171,6 +171,39 @@ This one took a little doing, which I documented in the [following issue](https:
 
 Styling front page with Bootstrap
 
+# App Title
+1. Wrap app title in jumbotron *DONE*
+
+# Error/User Message Block
+
+* Style an error/user message block and rewrite ui.js to point messages there.
+
+# Login Block
+
+1. Create responsive row/columns for auth features so that they either tile across the page or collapse into one column for smaller screens. *DONE*
+
+# Chore Block
+
+1. Style chore block *DONE*
+2. See if you can get Handlebars to help you tile them across the page *DONE*
+
+# Quote Block
+
+Nice to have, not need to have
+Create a block that shows an inspirational quote from Quotes API.
+
+# Change Password Block
+
+1. Style a block at the bottom with change password. Tile long across bottom *DONE*
+
+# Footer Block
+
+* Style a block for the footer *DONE*
+* Made by, links to repos, thank yous *DONE*
+
+
+## Error Messages
+
 
 ## Future
 

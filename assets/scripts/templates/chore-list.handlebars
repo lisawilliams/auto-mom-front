@@ -1,11 +1,20 @@
 
 {{#each chores as |chore|}}
 
-<ol id='chore-listing' data-id="{{chore.id}}">
-  <p>This is a chore listing<p>
-  <li>Chore ID:{{chore.id}}</li>
-  <li>Directions:{{chore.directions}}</li>
-  <li>Day of Week:{{chore.day_of_week}}</li>
-</ol>
+<div class="container">
+<div class="row">
+  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+    <div class="thumbnail">
+      <div class="caption">
+<div id='chore-listing' data-id="{{chore.id}}">
+  <!-- <p>Chore ID: {{chore.id}}</p> -->
+  <p>{{chore.chore_name}}</p>
+  <p>Chore ID: {{chore.id}}</p>
+  <p>Directions: {{chore.directions}}</p>
+  <p>Day of Week: {{chore.day_of_week}}</p>
+</div>
+</div>
+</div>
+</div>
 
 {{/each}}
