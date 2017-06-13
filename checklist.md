@@ -98,8 +98,8 @@ the production versions of the front and back end of the AutoMom app.
 3. Test that you can add a chore via rails console *DONE*
 4. Test that you can add a chore via a curl request *DONE*
 5. Test that you can return all of a user's chores via a curl request
-6. Test that you can update a chore via a curl request
-7. Test that you can delete a chore via a curl request
+6. Test that you can update a chore via a curl request *DONE*
+7. Test that you can delete a chore via a curl request *DONE*
 
 
 ### Join Table users-have-chores
@@ -150,7 +150,7 @@ Monday, June 11, 2017
 6. Confirm that request ran on backend with appropriate HTTP status code *DONE* Returns `Completed 201 Created`
 7. Confirm that the chore has changed in the backend DB *DONE*
 
-A real struggle. Filed [this issue](https://github.com/ga-wdi-boston/full-stack-project/issues/930) and was stuck on it for a long time. 
+A real struggle. Filed [this issue](https://github.com/ga-wdi-boston/full-stack-project/issues/930) and was stuck on it for a long time.
 
 ### Delete
 
@@ -169,7 +169,7 @@ This one took a little doing, which I documented in the [following issue](https:
 
 ## Styling
 
-We're gonna need some CSS up in here at some point.
+Styling front page with Bootstrap
 
 
 ## Future

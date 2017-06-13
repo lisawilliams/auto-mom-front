@@ -13,14 +13,72 @@
     </head>
     <body class="container-fluid">
 
-      <h1>AutoMom</h1>
+    <div class = "container">
+      <div class="jumbotron">
+       <h1>AutoMom</h1>
+     </div>
+   </div>
 
+   <div class="container">
+   <div class="row">
+     <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+       <div class="thumbnail">
+         <img src="thumb1.png" alt="...">
+         <div class="caption">
+           <h3>Hamburger</h3>
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+           <p><a href="#" class="btn btn-primary" role="button">Add to Cart</a></p>
+         </div>
+         </div>
+     </div>
+     <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+       <div class="thumbnail">
+         <img src="thumb2.png" alt="...">
+         <div class="caption">
+           <h3>Polenta</h3>
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+           <p><a href="#" class="btn btn-primary" role="button">Add to Cart</a></p>
+         </div>
+       </div>
+     </div>
+     <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+       <!-- <div class="thumbnail">
+         <img src="thumb3.png" alt="...">
+         <div class="caption">
+           <h3>Meatball Sub</h3> -->
+           <form id="sign-up">
+               <fieldset>
+                 <h2>Sign up</h2>
+                 <input type="text" name="credentials[email]" value="" placeholder="email">
+                 <input type="password" name="credentials[password]" value="" placeholder="password">
+                 <input type="password" name="credentials[password_confirmation]" value="" placeholder ="password confirmation">
+                 <input type="submit" name="submit" value="Sign up">
+                 <div id ="prompt"></div>
+               </fieldset>
+           </form>
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+           <p><a href="#" class="btn btn-primary" role="button">Add to Cart</a></p>
+         </div>
+       </div>
+     </div>
+     <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+       <div class="thumbnail">
+         <img src="thumb4.jpg" alt="...">
+         <div class="caption">
+           <h3>Eggplant</h3>
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+           <p><a href="#" class="btn btn-primary" role="button">Add to Cart</a></p>
+         </div>
+       </div>
+     </div>
+   </div>
+   </div>
 
-      <div class="container">
-        <div class="row article">
-          <div class="col-md-12 text-center box">
+<div class="container">
+    <div class="row article">
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
 
-
+<p>
 <form id="sign-up">
     <fieldset>
       <h2>Sign up</h2>
@@ -29,25 +87,42 @@
       <input type="password" name="credentials[password_confirmation]" value="" placeholder ="password confirmation">
       <input type="submit" name="submit" value="Sign up">
       <div id ="prompt"></div>
-    </fieldset></form>
-
-
-            <form id="sign-in">
-
-                <fieldset>
-                  <h2>Sign in</h2>
-                  <input type="text" name="credentials[email]" value="" placeholder="email">
-                  <input type="password" name="credentials[password]" value="" placeholder="password">
-                  <input type="submit" name="submit" value="Sign in">
-                  <div id ="prompt"></div>
-                </fieldset>
+    </fieldset>
 </form>
+</p>
 
+<div class="container">
+  <div class="row article">
+  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
 
-              <h2>Sign out</h2>
-                  <form id="sign-out">
-                      <input type="submit" name="submit" value="Sign Out">
-                  </form>
+<p>
+<form id="sign-in">
+    <fieldset>
+        <h2>Sign in</h2>
+        <input type="text" name="credentials[email]" value="" placeholder="email">
+        <input type="password" name="credentials[password]" value="" placeholder="password">
+        <input type="submit" name="submit" value="Sign in">
+      </fieldset>
+</form>
+</p>
+</div>
+</div>
+</div>
+
+<div class="container">
+  <div class="row article">
+  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+
+<p>
+<h2>Sign out</h2>
+<form id="sign-out">
+        <input type="submit" name="submit" value="Sign Out">
+</form>
+</p>
+
+</div>
+</div>
+</div>
 
 
                   <h2>Change Password</h2>
