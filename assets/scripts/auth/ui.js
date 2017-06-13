@@ -30,13 +30,13 @@ const onAddUserSuccess = (response) => {
   console.log(response)
   resetForm($('#sign-up'))
   console.log('Is the form empty now?')
-  $('#addUserSuccessPrompt').text('You have signed up!')
+  $('#usermessages').text('Thanks for signing up.')
 }
 
 const onAddUserFailure = (response) => {
   console.log('boooo it failed')
   console.log(response)
-  $('#addUserFailurePrompt').text('Signup failed. Try again.')
+  $('#usermessages').text('Huh. Signup failed. Try again?')
 }
 
 // Sign in user
@@ -49,12 +49,13 @@ const onSignInSuccess = (response) => {
   console.log(response)
   resetForm($('#sign-in'))
   console.log('Is the form empty now?')
+  $('#usermessages').text('You are signed in. Get ready to have organized chores!')
 }
 
 const onSignInFailure = (response) => {
   console.log('boo it failed')
   console.log(response)
-  $('#prompt').text('Sign In Failed')
+  $('#usermessages').text('Huh. Signing in failed. Try again?')
 }
 
 // Sign out user
@@ -65,11 +66,12 @@ const signOutSuccess = () => {
   console.log('clear content function ran')
   store.user = null
   console.log('We are at the end of the signOutSuccess function')
+  $('#usermessages').text('You are signed out. Thanks for visiting! Text your mama :)')
 }
 
 const signOutFailure = (error) => {
   console.log('signOut failure ran. error is :', error)
-  $('#signOutFailurePrompt').text('Hm. Signout did not work. Try again?')
+  $('#usermessages').text('Hm. Signout did not work. Try again?')
 }
 
 // Change user password
@@ -78,12 +80,12 @@ const changePasswordSuccess = () => {
   console.log('changePassword success ran. and nothing was returned')
   store.user = null
   resetForm($('#change-password'))
-  $('#changePasswordSuccessPrompt').text('You have changed your password.')
+  $('#usermessages').text('You have changed your password.')
 }
 
 const changePasswordFailure = (error) => {
   console.log('changePassword failure ran. error is :', error)
-  $('#changePasswordFailurePrompt').text('Hm. That did not work. Try again?')
+  $('#usermessages').text('Hm. That did not work. Try again?')
 }
 
 module.exports = {
