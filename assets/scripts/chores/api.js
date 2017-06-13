@@ -69,7 +69,6 @@ const updateChore = function (choreObject, choreNumber) {
     },
     data: choreObject
   })
-
 }
 
 // API DELETE, deletes a selected chore
