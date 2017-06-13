@@ -206,6 +206,12 @@ Create a block that shows an inspirational quote from Quotes API.
 
 * Write user-facing status and error messages to display to user *DONE*
 
+## Bugfixes and Enhancements
+
+* Change how the app manages chore list states (see notebook)
+* Hide/show auth and CRUD buttons/form to prevent confusing user and provoking errors from user clicking on stuff when they are not logged in.
+* Remove or comment out console.log statements. 
+
 ## Project Requirements
 
 Below are the formal project requirements for the Full Stack project.

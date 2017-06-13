@@ -29,6 +29,20 @@ const onShowAllChores = function (event) {
     .catch(ui.showChoreFailure)
 }
 
+// Want to prevent ShowAllChores from showing chores twice
+// Example from tic tac toe
+//
+// const onClickCellOne = function (event) {
+//   event.preventDefault()
+//   const data = getFormFields(event.target)
+//   if (store.game.cells[1] !== '') {
+//     ui.clickedFullCell()
+//   } else {
+//     api.clickedCellOne()
+//     .then(ui.clickedCellOneSuccess)
+//     .catch(ui.clickedCellOneFailure)
+//   }
+// }
 // Update a chore
 
 const onUpdateChore = function (event) {
