@@ -169,14 +169,14 @@ This one took a little doing, which I documented in the [following issue](https:
 
 ## Styling
 
-Styling front page with Bootstrap
+Styling front page with Bootstrap *DONE*
 
 # App Title
 1. Wrap app title in jumbotron *DONE*
 
 # Error/User Message Block
 
-* Style an error/user message block and rewrite ui.js to point messages there.
+* Style an error/user message block and rewrite ui.js to point messages there. *DONE*
 
 # Login Block
 
@@ -202,8 +202,9 @@ Create a block that shows an inspirational quote from Quotes API.
 * Made by, links to repos, thank yous *DONE*
 
 
-## Error Messages
+## Error/Status Messages
 
+* Write user-facing status and error messages to display to user *DONE*
 
 ## Project Requirements
 
@@ -233,7 +234,7 @@ Below are the formal project requirements for the Full Stack project.
     DELETE requests. Any actions which change data must be authenticated, and
     the data must be "owned" by the user performing the change. *YES*
 -   **Utilize an ORM** to create a database table structure and interact with
-    data *YES BUT CONFIRM*
+    data *YES*
 -   **Use a front-end Javascript app** to communicate with your API (both read
     and write) and render data that it receives in the browser. *YES*
 -   Have **semantically clean HTML and CSS** *I THINK SO? ASK A CONSULTANT*
@@ -261,8 +262,8 @@ additional goals that you can shoot for:
 ### Must have
 
 * Show a list of all a user's chores *DONE*
-* User-facing error messages for auth problems
-* User-facing error messages for chore-CRUD action problems
+* User-facing error messages for auth problems *YES*
+* User-facing error messages for chore-CRUD action problems *YES*
 
 ### Nice to have
 

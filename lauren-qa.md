@@ -1,0 +1,22 @@
+- Please, please, _please_ remember to take out all your `console.log`s
+- On signInSuccess, it might be good to hide the signUp/signIn forms
+- On Show all chores, it might be good to have some sort of indicator for the user that you have no chores showing if you haven't put in any chores
+- *DONE* On create a chore success, it might be good to have some sort of indicator for the user that the create chore command went through
+- If I hit "Show all chores" twice, it pops up a second time.
+	- I'm guessing you have some sort of `.append()` here for the UI?
+	- Handlebars might be cool for this, but I know it's the last day, so if you can't use that then maybe some sort of `.val()` or something?
+	- `.append()` would be a user-facing bug, I think
+- Good on Handlebars use for the input forms.
+- *DONE* CHANGE PASSWORD- OLD PASSWORD IS NOT HIDDEN
+	- input type should be password: `<input type="password">`
+- *DONE* you should have something in the UI if you put in the wrong password
+- *DONE* In general, any time the user does anything there should be some sort of thing to tell them that they were successful or should try again
+- *DONE* If I try to change the password two times in a row, it sets off the debugger:
+	- TypeError: cannot read property 'id' of null at Object.changePassword. Not sure what that's about.
+	- Update: after changing the password everything sets off this typeError.
+- If I'm not logged in and I try to click a button that needs authorization, it throws and error saying it can't find the token.
+	- Better UI would be either have a notification saying "you need to be logged in to do this!" or just hide everything until signInSuccess.
+	- if you go the former route, I think that can be done in an `if` statement
+- It is possible for a user to create an empty chore, ie a chore with no values
+	- When clicking 'show all chores' any time after creating a blank chore, nothing shows up, but the console.log tells me the object exists
+	- Are these input values required on the back-end?

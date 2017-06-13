@@ -78,7 +78,7 @@ const signOutFailure = (error) => {
 
 const changePasswordSuccess = () => {
   console.log('changePassword success ran. and nothing was returned')
-  store.user = null
+  // store.user = null
   resetForm($('#change-password'))
   $('#usermessages').text('You have changed your password.')
 }

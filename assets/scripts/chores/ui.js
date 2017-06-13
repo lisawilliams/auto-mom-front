@@ -32,13 +32,13 @@ const createChoreSuccess = (response) => {
   console.log(response)
   resetForm($('#create-chore'))
   console.log('Is the form empty now?')
-  $('#addUserSuccessPrompt').text('You have added a chore!')
+  $('#usermessages').text('You have added a chore!')
 }
 
 const createChoreFailure = (response) => {
   console.log('boooo it failed')
   console.log(response)
-  $('#addChoreFailurePrompt').text('Adding a chore failed. Try again.')
+  $('#usermessages').text('Adding a chore failed. Try again.')
 }
 
 // Chore show
@@ -48,12 +48,13 @@ const showChoreSuccess = (response) => {
   console.log(store.chores)
   const showChoreList = showChoresTemplate({ chores: store.chores })
   $('#chore-list').append(showChoreList)
+  $('#usermessages').text('Look at those chores! But do not worry, you got this.')
 }
 
 const showChoreFailure = (response) => {
   console.log('boooo it failed')
   console.log(response)
-  $('#showChoreFailurePrompt').text('Hm. Showing all the chores failed. Try again?')
+  $('#usermessages').text('Hm. Showing all the chores failed. Try again?')
 }
 
 // Chore Update
@@ -63,13 +64,13 @@ const updateChoreSuccess = (response) => {
   console.log(response)
   resetForm($('#update-chore'))
   console.log('Is the form empty now?')
-  $('#updateChoreSuccessPrompt').text('You have updated a chore!')
+  $('#usermessages').text('You have updated a chore!')
 }
 
 const updateChoreFailure = (response) => {
   console.log('boooo it failed')
   console.log(response)
-  $('#updateChoreFailurePrompt').text('Updating a chore failed. Try again?')
+  $('#usermessages').text('Updating a chore failed. Try again?')
 }
 
 // Chore Delete
@@ -79,13 +80,13 @@ const deleteChoreSuccess = (response) => {
   console.log(response)
   resetForm($('#delete-chore'))
   console.log('Is the form empty now?')
-  $('#deleteChoreSuccessPrompt').text('You have deleted a chore!')
+  $('#usermessages').text('You have deleted a chore!')
 }
 
 const deleteChoreFailure = (response) => {
   console.log('boooo it failed')
   console.log(response)
-  $('#deleteChoreFailurePrompt').text('Deleting a chore failed. Try again.')
+  $('#usermessages').text('Deleting a chore failed. Try again.')
 }
 
 module.exports = {
