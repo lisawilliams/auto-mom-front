@@ -61,8 +61,10 @@ const onSignInFailure = (response) => {
 
 const signOutSuccess = () => {
   console.log('signOut success ran. and nothing was returned')
+  $('#chore-container').html('')
+  console.log('clear content function ran')
   store.user = null
-  $('#signOutSuccessPrompt').text('You have signed out. See you soon!')
+  console.log('We are at the end of the signOutSuccess function')
 }
 
 const signOutFailure = (error) => {
