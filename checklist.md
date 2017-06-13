@@ -150,7 +150,7 @@ Monday, June 11, 2017
 6. Confirm that request ran on backend with appropriate HTTP status code *DONE* Returns `Completed 201 Created`
 7. Confirm that the chore has changed in the backend DB *DONE*
 
-A real struggle. Filed [this issue](https://github.com/ga-wdi-boston/full-stack-project/issues/930) and was stuck on it for a long time. Didn't post solution but you can ask me ;)
+A real struggle. Filed [this issue](https://github.com/ga-wdi-boston/full-stack-project/issues/930) and was stuck on it for a long time. 
 
 ### Delete
 

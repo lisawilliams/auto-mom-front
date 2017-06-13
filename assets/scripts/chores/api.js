@@ -59,7 +59,7 @@ const showAllChores = function () {
 // }
 
 const updateChore = function (choreObject, choreNumber) {
-  debugger
+  // debugger
   console.log(store.user.token)
   return $.ajax({
     url: config.apiOrigin + '/chores/' + choreNumber,
