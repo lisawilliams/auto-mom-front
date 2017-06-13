@@ -205,6 +205,56 @@ Create a block that shows an inspirational quote from Quotes API.
 ## Error Messages
 
 
+## Project Requirements
+
+Below are the formal project requirements for the Full Stack project.
+
+## Deliverables
+
+-   A **working full-stack application, built by you**, hosted somewhere on the
+    internet. *YES*
+-   **Two Github repos** (one for your front-end and one for your back-end),
+    with frequent commits dating back to the very beginning of the project. Each
+    repo will need a **README.md file** with a link to the other repo. Your
+    front-end repo's README should also have *YES*
+
+    -   An **explanation** of the what the app does and how it works, the
+        approach taken in building it, and any unsolved problems that you hit. *YES*
+    -   **User stories** written for your app. *YES*
+    -   At least one **wireframe** (or a link to one) that you've created to
+        plan out your app. *YES*
+    -   A **link** to the live application. *YES*
+
+### Your app must
+
+-   Have an **API** that is securely accessible by your browser app, built using
+    frameworks covered in class. *YES*
+-   Create **at least 4 RESTful routes** for handling GET, POST, PUT/PATCH, and
+    DELETE requests. Any actions which change data must be authenticated, and
+    the data must be "owned" by the user performing the change. *YES*
+-   **Utilize an ORM** to create a database table structure and interact with
+    data *YES BUT CONFIRM*
+-   **Use a front-end Javascript app** to communicate with your API (both read
+    and write) and render data that it receives in the browser. *YES*
+-   Have **semantically clean HTML and CSS** *I THINK SO? ASK A CONSULTANT*
+-   Be **deployed online**, so that it is accessible to the public *YES*
+-   Be linked in your `pinned repositories` on your GitHub profile page *YES*
+
+### Your app must not
+
+-   Have any obvious user-facing errors *NEED TESTING*
+-   Rely on refreshing the page for any functionality. *YES* (That is, it meets this requirement)
+
+### Bonus
+
+Once (and only once) you've satisfied the core requirements, here are some
+additional goals that you can shoot for:
+
+-   Incorporate Bootstrap, Handlebars, or some other front-end tool. *YES AND YES*
+-   Interact with third-party APIs and integrate them into your app.
+-   Put some extra thought and effort into visual and UI design. *SORT OF*
+
+
 ## Future
 
 
