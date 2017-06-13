@@ -7,7 +7,8 @@ const store = require('./../store')
 
 const createChore = (data) => {
   return $.ajax({
-    url: config.apiOrigins.development + '/chores/',
+    // url: config.apiOrigins.development + '/chores/',
+    url: config.apiOrigin + '/chores/',
     method: 'POST',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -24,7 +25,8 @@ const createChore = (data) => {
 
 const showAllChores = function () {
   return $.ajax({
-    url: config.apiOrigins.development + '/chores/',
+    // url: config.apiOrigins.development + '/chores/',
+    url: config.apiOrigin + '/chores/',
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -40,23 +42,7 @@ const showAllChores = function () {
   })
 }
 
-// API PATCH, updates a selected chore
-//
-// const updateChore = (choreId, choreData) => {
-//   console.log('You have reached api.updateChore')
-//   console.log('Below is console.log(choreData)')
-//   console.log(choreData)
-//   console.log('Below is console.log(choreId)')
-//   console.log(choreId)
-//   return $.ajax({
-//     url: config.apiOrigin + '/chores/' + choreId,
-//     method: 'PATCH',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     },
-//     choreData
-//   })
-// }
+// API PATCH, updates a chore
 
 const updateChore = function (choreObject, choreNumber) {
   // debugger
@@ -78,7 +64,8 @@ const updateChore = function (choreObject, choreNumber) {
 
 const deleteChore = (id) => {
   return $.ajax({
-    url: config.apiOrigins.development + '/chores/' + id,
+    url: config.apiOrigin + '/chores/' + id,
+    // url: config.apiOrigins.development + '/chores/' + id,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token
