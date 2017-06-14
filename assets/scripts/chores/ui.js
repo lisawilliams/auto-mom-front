@@ -84,6 +84,7 @@ const updateChoreFailure = (response) => {
 // Chore Delete
 
 const deleteChoreSuccess = (response) => {
+  resetForm($('#delete-chore'))
   $('#usermessages').text('You have deleted a chore!')
   $('#chore-list').empty()
   $('#show-chore-button').show()
