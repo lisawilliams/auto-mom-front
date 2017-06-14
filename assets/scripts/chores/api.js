@@ -2,13 +2,11 @@
 
 const config = require('./../config')
 const store = require('./../store')
-// const ui = require('./ui')
 
 // API POST, posts a new chore to the db based on user form input
 
 const createChore = (data) => {
   return $.ajax({
-    // url: config.apiOrigins.development + '/chores/',
     url: config.apiOrigin + '/chores/',
     method: 'POST',
     headers: {
@@ -18,7 +16,6 @@ const createChore = (data) => {
   })
   .then((response) => {
     store.chore = response.chore
-    console.log(response)
   })
 }
 
@@ -26,7 +23,6 @@ const createChore = (data) => {
 
 const showAllChores = function () {
   return $.ajax({
-    // url: config.apiOrigins.development + '/chores/',
     url: config.apiOrigin + '/chores/',
     method: 'GET',
     headers: {
@@ -35,14 +31,6 @@ const showAllChores = function () {
   })
   .then((response) => {
     store.chores = response.chores
-    console.log('This is response.chores')
-    console.log(response.chores)
-    console.log('This is (response) from showAllChores in chores/api.js')
-    console.log(response)
-    console.log('This is response.chores[0]')
-    console.log(response.chores[0])
-    console.log('this is store.chores')
-    console.log(store.chores)
     return store
   })
 }
@@ -51,7 +39,6 @@ const showAllChores = function () {
 
 const updateChore = function (choreObject, choreNumber) {
   // debugger
-  console.log(store.user.token)
   return $.ajax({
     url: config.apiOrigin + '/chores/' + choreNumber,
     method: 'PATCH',
