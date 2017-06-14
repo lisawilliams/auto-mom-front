@@ -16,6 +16,12 @@ const createChore = (data) => {
   })
   .then((response) => {
     store.chore = response.chore
+    console.log('this is console.log data from createChore api.js')
+    console.log(data)
+    console.log('this is response.chore from createChore api.js')
+    console.log(response.chore)
+    console.log('this is store.chore from createChore api.js')
+    console.log(store.chore)
   })
 }
 
@@ -50,9 +56,6 @@ const updateChore = function (choreObject, choreNumber) {
 }
 
 // API DELETE, deletes a selected chore
-
-// This briefly had a method of GET, and it worked, so adapting it
-// may work for a GET for a single chore. Nota bene.
 
 const deleteChore = (id) => {
   return $.ajax({
