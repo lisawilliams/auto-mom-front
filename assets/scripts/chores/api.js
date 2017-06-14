@@ -2,6 +2,7 @@
 
 const config = require('./../config')
 const store = require('./../store')
+// const ui = require('./ui')
 
 // API POST, posts a new chore to the db based on user form input
 
@@ -34,8 +35,12 @@ const showAllChores = function () {
   })
   .then((response) => {
     store.chores = response.chores
-    console.log('This comes from showAllChores in chores/api.js')
+    console.log('This is response.chores')
+    console.log(response.chores)
+    console.log('This is (response) from showAllChores in chores/api.js')
     console.log(response)
+    console.log('This is response.chores[0]')
+    console.log(response.chores[0])
     console.log('this is store.chores')
     console.log(store.chores)
     return store

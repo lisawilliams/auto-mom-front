@@ -1,7 +1,7 @@
 'use strict'
 const api = require('./api')
 const ui = require('./ui')
-// const store = require('./../store')
+const store = require('./../store')
 
 const getFormFields = require('../../../lib/get-form-fields.js')
 
@@ -21,28 +21,11 @@ const onCreateChore = function (event) {
 const onShowAllChores = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  // const data = getFormFields(event.target)
-  console.log('made it from event handler to onShowAllChores')
-  console.log(data)
   api.showAllChores()
     .then(ui.showChoreSuccess)
     .catch(ui.showChoreFailure)
 }
 
-// Want to prevent ShowAllChores from showing chores twice
-// Example from tic tac toe
-//
-// const onClickCellOne = function (event) {
-//   event.preventDefault()
-//   const data = getFormFields(event.target)
-//   if (store.game.cells[1] !== '') {
-//     ui.clickedFullCell()
-//   } else {
-//     api.clickedCellOne()
-//     .then(ui.clickedCellOneSuccess)
-//     .catch(ui.clickedCellOneFailure)
-//   }
-// }
 // Update a chore
 
 const onUpdateChore = function (event) {

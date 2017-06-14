@@ -210,7 +210,9 @@ Create a block that shows an inspirational quote from Quotes API.
 
 * Change how the app manages chore list states (see notebook)
 * Hide/show auth and CRUD buttons/form to prevent confusing user and provoking errors from user clicking on stuff when they are not logged in.
-* Remove or comment out console.log statements. 
+* Remove or comment out console.log statements.
+* Copy README from auto-mom-front to auto-mom-back repo to have nice READMEs on both sides.
+* Doublecheck table in README to be sure what it says is correct. 
 
 ## Project Requirements
 
