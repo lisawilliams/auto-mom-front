@@ -28,9 +28,10 @@ const failure = (error) => {
 const createChoreSuccess = (response) => {
   resetForm($('#create-chore'))
   $('#usermessages').text('You have added a chore!')
-  $('#chore-list').remove
+  $('#chore-list').hide()
   const showChoreList = showChoresTemplate({ chores: store.chores })
   $('#chore-list').append(showChoreList)
+  $('#chore-list').show()
 }
 
 const createChoreFailure = (response) => {
