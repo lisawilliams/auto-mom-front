@@ -28,10 +28,8 @@ const failure = (error) => {
 const createChoreSuccess = (response) => {
   resetForm($('#create-chore'))
   $('#usermessages').text('You have added a chore!')
-  $('#chore-list').hide()
-  // const showChoreList = showChoresTemplate({ chores: store.chores })
-  // $('#chore-list').append(showChoreList)
-  // $('#chore-list').show()
+  $('#chore-list').empty()
+  $('#show-chore-button').show()
 }
 
 const createChoreFailure = (response) => {
@@ -49,6 +47,7 @@ const validateChoreShow = (response) => {
 }
 
 const showChoreSuccess = (response) => {
+  $('#chore-list').show()
   const showChoreList = showChoresTemplate({ chores: store.chores })
   $('#chore-list').append(showChoreList)
   $('#usermessages').text('Look at those chores! But do not worry, you got this.')
@@ -73,10 +72,9 @@ const addSomeChores = (response) => {
 
 const updateChoreSuccess = (response) => {
   resetForm($('#update-chore'))
-  const showChoreList = showChoresTemplate({ chores: store.chores })
   $('#usermessages').text('You have updated a chore!')
-  $('#chore-list').empty
-  $('#chore-list').append(showChoreList)
+  $('#chore-list').empty()
+  $('#show-chore-button').show()
 }
 
 const updateChoreFailure = (response) => {
@@ -86,10 +84,10 @@ const updateChoreFailure = (response) => {
 // Chore Delete
 
 const deleteChoreSuccess = (response) => {
-  const showChoreList = showChoresTemplate({ chores: store.chores })
+  resetForm($('#delete-chore'))
   $('#usermessages').text('You have deleted a chore!')
-  $('#chore-list').empty
-  $('#chore-list').append(showChoreList)
+  $('#chore-list').empty()
+  $('#show-chore-button').show()
 }
 
 const deleteChoreFailure = (response) => {
