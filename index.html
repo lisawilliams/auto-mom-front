@@ -31,6 +31,7 @@
      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
        <div class="thumbnail">
          <div class="caption">
+           <div class="sign-up-box">
            <form id="sign-up">
                <fieldset>
                  <h2>Sign up</h2>
@@ -42,11 +43,13 @@
            </form>
          </div>
          </div>
+         </div>
      </div>
 
      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
        <div class="thumbnail">
          <div class="caption">
+           <div class="sign-in-box">
            <form id="sign-in">
                <fieldset>
                    <h2>Sign in</h2>
@@ -55,7 +58,7 @@
                    <input type="submit" name="submit" value="Sign in">
                  </fieldset>
            </form>
-
+</div>
          </div>
        </div>
      </div>
@@ -65,10 +68,12 @@
        <div class="thumbnail">
 
          <div class="caption">
+           <div class="sign-out-box">
            <h2>Sign out</h2>
            <form id="sign-out">
                    <input type="submit" name="submit" value="Sign Out">
            </form>
+         </div>
          </div>
        </div>
      </div>
@@ -78,7 +83,7 @@
 <div class="container">
   <div class="row article">
   <div class="col-lg-12 col-md-12 col-sm-12col-xs-12">
-
+<div class="show-all-chores-box">
       <h2>Show all chores</h2>
         <form id="show-chore">
           <fieldset>
@@ -87,6 +92,7 @@
           </div>
           </fieldset>
         </form>
+      </div>
         <br><br><br>
 
 <!-- Using AJAX to return list of chores in the 'list' div -->
@@ -106,6 +112,7 @@
        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
          <div class="thumbnail">
            <div class="caption">
+             <div class="create-chore-box"</div>
            <h2> Create a chore</h2>
            <form id="create-chore">
              <fieldset>
@@ -116,6 +123,7 @@
           <input type ="submit" name="submit" value="Create chore">
         </fieldset>
       </form>
+    </div>
 
     </div>
   </div>
@@ -127,6 +135,7 @@
 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
   <div class="thumbnail">
     <div class="caption">
+      <div class="delete-chore-box">
   <h2>Delete a Chore</h2>
   <form id="delete-chore">
     <fieldset>
@@ -137,10 +146,12 @@
 </div>
 </div>
 </div>
+</div>
 
 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
   <div class="thumbnail">
     <div class="caption">
+      <div class="update-chore-box">
   <h2> Update a chore</h2>
   <form id="update-chore">
     <fieldset>
@@ -152,22 +163,12 @@
  <input type ="submit" name="submit" value="Update chore">
 </fieldset>
 </form>
+</div>
 
 </div>
 </div>
 </div>
 
-<!-- Schema from backend. Checking to make sure params are right
-
-create_table "chores", force: :cascade do |t|
-  t.string   "chore_name"
-  t.string   "directions"
-  t.string   "day_of_week"
-  t.datetime "created_at",  null: false
-  t.datetime "updated_at",  null: false
-  t.integer  "user_id"
-  t.index ["user_id"], name: "index_chores_on_user_id", using: :btree
-end -->
 
       <BR><BR><BR><BR>
 
