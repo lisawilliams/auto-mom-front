@@ -39,6 +39,12 @@ const onSignInSuccess = (response) => {
   store.user = response.user
   resetForm($('#sign-in'))
   $('#usermessages').text('You are signed in. Get ready to have organized chores!')
+  $('.create-chore-box').show()
+  $('.delete-chore-box').show()
+  $('.update-chore-box').show()
+  $('#show-chore-button').show()
+  $('.sign-up-box').hide()
+  $('.sign-in-box').hide()
 }
 
 const onSignInFailure = (response) => {
@@ -52,6 +58,9 @@ const signOutSuccess = () => {
   $('#chore-container').html('')
   store.user = null
   $('#usermessages').text('You are signed out. Thanks for visiting! Text your mama :)')
+  $('.create-chore-box').hide()
+  $('.delete-chore-box').hide()
+  $('.update-chore-box').hide()
 }
 
 const signOutFailure = (error) => {

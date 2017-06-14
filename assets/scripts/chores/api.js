@@ -16,12 +16,6 @@ const createChore = (data) => {
   })
   .then((response) => {
     store.chore = response.chore
-    console.log('this is console.log data from createChore api.js')
-    console.log(data)
-    console.log('this is response.chore from createChore api.js')
-    console.log(response.chore)
-    console.log('this is store.chore from createChore api.js')
-    console.log(store.chore)
   })
 }
 
