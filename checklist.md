@@ -79,9 +79,11 @@ Thursday, June 8, 2017
 See Starting Up Local & Public Apps below for information on how to start & run
 the production versions of the front and back end of the AutoMom app.
 
-## Upcoming
+
 
 ### Rails Backend work
+
+Friday, June 9
 
 ### User
 

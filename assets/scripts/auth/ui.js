@@ -20,6 +20,7 @@ const failure = (error) => {
 
 }
 
+
 // Auth functions
 
 // Add user
@@ -27,6 +28,7 @@ const failure = (error) => {
 const onAddUserSuccess = (response) => {
   resetForm($('#sign-up'))
   $('#usermessages').text('Thanks for signing up.')
+  // Add something that hides the signup box
 }
 
 const onAddUserFailure = (response) => {
@@ -38,11 +40,11 @@ const onAddUserFailure = (response) => {
 const onSignInSuccess = (response) => {
   store.user = response.user
   resetForm($('#sign-in'))
+  // $('#chore-crud').removeClass('hidden')
   $('#usermessages').text('You are signed in. Get ready to have organized chores!')
 }
 
 const onSignInFailure = (response) => {
-
   $('#usermessages').text('Huh. Signing in failed. Try again?')
 }
 
@@ -71,6 +73,7 @@ const changePasswordFailure = (error) => {
 }
 
 module.exports = {
+  // startState,
   resetForm,
   failure,
   success,

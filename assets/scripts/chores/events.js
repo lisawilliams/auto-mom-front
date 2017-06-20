@@ -4,6 +4,13 @@ const ui = require('./ui')
 const store = require('./../store')
 const getFormFields = require('../../../lib/get-form-fields.js')
 
+// On page load, make chore forms invisible
+
+const onStartState = function (event) {
+  event.preventDefault()
+  ui.startState
+}
+
 // Chore events
 
 const onCreateChore = function (event) {
@@ -51,6 +58,7 @@ const onDeleteChore = function (event) {
 // REMEMBER TO PUT IN # before form ID!
 
 const addHandlers = () => {
+  // $('#chore-crud').on((document).ready, onStartState)
   $('#create-chore').on('submit', onCreateChore)
   $('#show-chore').on('submit', onShowAllChores)
   $('#delete-chore').on('submit', onDeleteChore)

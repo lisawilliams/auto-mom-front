@@ -52,6 +52,7 @@ const showChoreSuccess = (response) => {
   $('#chore-list').append(showChoreList)
   $('#usermessages').text('Look at those chores! But do not worry, you got this.')
   $('#show-chore-button').hide()
+  // may want to run a function here that automatically repopulates the list; check out Rory's solution to this
 }
 
 const showChoreFailure = (response) => {
