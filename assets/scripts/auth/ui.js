@@ -55,6 +55,10 @@ const onSignInFailure = (response) => {
 const signOutSuccess = () => {
   $('#chore-container').html('')
   store.user = null
+  $('#chore-crud').addClass('hidden')
+  $('#sign-out-wrapper').addClass('hidden')
+  $('#sign-up-wrapper').removeClass('hidden')
+  $('#sign-in-wrapper').removeClass('hidden')
   $('#usermessages').text('You are signed out. Thanks for visiting! Text your mama :)')
 }
 
