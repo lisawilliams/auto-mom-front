@@ -20,7 +20,6 @@ const failure = (error) => {
 
 }
 
-
 // Auth functions
 
 // Add user
@@ -40,7 +39,10 @@ const onAddUserFailure = (response) => {
 const onSignInSuccess = (response) => {
   store.user = response.user
   resetForm($('#sign-in'))
-  // $('#chore-crud').removeClass('hidden')
+  $('#chore-crud').removeClass('hidden')
+  $('#sign-out-wrapper').removeClass('hidden')
+  $('#sign-up-wrapper').addClass('hidden')
+  $('#sign-in-wrapper').addClass('hidden')
   $('#usermessages').text('You are signed in. Get ready to have organized chores!')
 }
 
