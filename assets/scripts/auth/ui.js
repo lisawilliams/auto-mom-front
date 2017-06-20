@@ -53,7 +53,7 @@ const onSignInFailure = (response) => {
 // Sign out user
 
 const signOutSuccess = () => {
-  $('#chore-container').html('')
+  // $('#chore-container').html('')
   store.user = null
   $('#chore-crud').addClass('hidden')
   $('#sign-out-wrapper').addClass('hidden')
