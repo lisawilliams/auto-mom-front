@@ -40,6 +40,7 @@ const onSignInSuccess = (response) => {
   store.user = response.user
   resetForm($('#sign-in'))
   $('#chore-crud').removeClass('hidden')
+  $('#show-chore-button').show()
   $('#sign-out-wrapper').removeClass('hidden')
   $('#sign-up-wrapper').addClass('hidden')
   $('#sign-in-wrapper').addClass('hidden')
@@ -55,6 +56,7 @@ const onSignInFailure = (response) => {
 const signOutSuccess = () => {
   // $('#chore-container').html('')
   store.user = null
+  $('#chore-container').empty()
   $('#chore-crud').addClass('hidden')
   $('#sign-out-wrapper').addClass('hidden')
   $('#sign-up-wrapper').removeClass('hidden')
