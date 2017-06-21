@@ -22,6 +22,7 @@ const createChore = (data) => {
 // API GET, shows all chores for a current user
 
 const showAllChores = function () {
+  console.log('This is after the .then in chores/api.js')
   return $.ajax({
     url: config.apiOrigin + '/chores/',
     method: 'GET',

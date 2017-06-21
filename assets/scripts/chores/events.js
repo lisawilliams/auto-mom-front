@@ -24,11 +24,13 @@ const onCreateChore = function (event) {
 // Show all of a user's chores
 
 const onShowAllChores = function (event) {
+  console.log('We have reached onShowAllChores in chores/events.js')
   event.preventDefault()
   const data = getFormFields(event.target)
   api.showAllChores()
     .then(ui.showChoreSuccess)
     .catch(ui.showChoreFailure)
+    console.log('This is after the .then/.catch combo in chores/events.js')
 }
 
 // Update a chore
