@@ -1,5 +1,5 @@
 // code from the following commit:
-//
+// https://github.com/lisawilliams/auto-mom-front/commit/48c7eb69ad6457e6a6ddd46a33744a50929d1e6d
 
 'use strict'
 
@@ -59,6 +59,13 @@ const signOutSuccess = () => {
   $('#chore-container').html('')
   store.user = null
   $('#chore-crud').addClass('hidden')
+  // this restores the show chore button so it shows when the next user logs in.
+  //   $('#show-chore-button').hide() is used in chores/ui.js
+  // in the showChoreSuccess function. It hides the button so users
+  // don't click the button twice. This restores it upon logout.
+  // it is still hidden because the the 'chore-crud' div that contains
+  // the show-chore button is still hidden upon logout.
+  $('#show-chore-button').show()
   $('#sign-out-wrapper').addClass('hidden')
   $('#sign-up-wrapper').removeClass('hidden')
   $('#sign-in-wrapper').removeClass('hidden')
