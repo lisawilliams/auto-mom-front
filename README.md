@@ -104,13 +104,13 @@ without checking first.
 
 ## Wireframes
 
-[Here is a link to a wireframe I drew for AutoMom](https://github.com/lisawilliams/auto-mom-front/blob/development/Auto-Mom-Wireframe.jpg). 
+[Here is a link to a wireframe I drew for AutoMom](https://github.com/lisawilliams/auto-mom-front/blob/development/Auto-Mom-Wireframe.jpg).
 
 ## Link to Live, Deployed AutoMom App
 
 [AutoMom Deployed App](https://lisawilliams.github.io/auto-mom-front/)
 
-## Link to Front And Back End Responsive
+## Link to Front And Back End Repositories
 
 [AutoMom Front End](https://github.com/lisawilliams/auto-mom-front)
 

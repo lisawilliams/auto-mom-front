@@ -1,6 +1,3 @@
-// code from the following commit:
-// https://github.com/lisawilliams/auto-mom-front/commit/48c7eb69ad6457e6a6ddd46a33744a50929d1e6d
-
 'use strict'
 
 const resetForm = function resetForm ($form) {
@@ -43,17 +40,11 @@ const onSignInSuccess = (response) => {
   store.user = response.user
   resetForm($('#sign-in'))
   $('#chore-crud').removeClass('hidden')
-  $('#show-chores-wrapper').removeClass('hidden')
+  $('#show-chore-button').show()
   $('#sign-out-wrapper').removeClass('hidden')
   $('#sign-up-wrapper').addClass('hidden')
   $('#sign-in-wrapper').addClass('hidden')
   $('#usermessages').text('You are signed in. Get ready to have organized chores!')
-  $('.create-chore-box').show()
-  $('.delete-chore-box').show()
-  $('.update-chore-box').show()
-  $('#show-chore-button').show()
-  $('.sign-up-box').hide()
-  $('.sign-in-box').hide()
 }
 
 const onSignInFailure = (response) => {
@@ -64,38 +55,13 @@ const onSignInFailure = (response) => {
 
 const signOutSuccess = () => {
   // $('#chore-container').html('')
-  // switching to .empty() here to see what happens
-  // $('#chore-container').empty()
-  // Tested the .empty. If you comment it out,
-  // the show chore button shows for the next user,
-  // and it works -- but it shows you both the current
-  // and the previous user's chores.
-
-  // now trying to empty a div that's closer to the actual chore listing
-  // targets div chore-list, which is in index.html
-  $('#chore-list').empty()
-  console.log('Emptied chore list')
   store.user = null
-  console.log('Set user to null')
+  $('#chore-container').empty()
   $('#chore-crud').addClass('hidden')
-  // this restores the show chore button so it shows when the next user logs in.
-  //   $('#show-chore-button').hide() is used in chores/ui.js
-  // in the showChoreSuccess function. It hides the button so users
-  // don't click the button twice. This restores it upon logout.
-  // it is still hidden because the the 'chore-crud' div that contains
-  // the show-chore button is still hidden upon logout.
-
-  // Update: have moved the chore-crud div down so that it does not enclose the
-  // show chore feature. Temporarily shows. Can fix later.
-  $('#show-chore-button').show()
-  $('#show-chores-wrapper').addClass('hidden')
   $('#sign-out-wrapper').addClass('hidden')
   $('#sign-up-wrapper').removeClass('hidden')
   $('#sign-in-wrapper').removeClass('hidden')
   $('#usermessages').text('You are signed out. Thanks for visiting! Text your mama :)')
-  $('.create-chore-box').hide()
-  $('.delete-chore-box').hide()
-  $('.update-chore-box').hide()
 }
 
 const signOutFailure = (error) => {
