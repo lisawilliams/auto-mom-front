@@ -59,8 +59,17 @@ const signOutSuccess = () => {
   // $('#chore-container').html('')
   // switching to .empty() here to see what happens
   // $('#chore-container').empty()
-  // Tested the .empty. If you comment it out and
+  // Tested the .empty. If you comment it out,
+  // the show chore button shows for the next user,
+  // and it works -- but it shows you both the current
+  // and the previous user's chores.
+
+  // now trying to empty a div that's closer to the actual chore listing
+  // targets div chore-list, which is in index.html
+  $('#chore-list').empty()
+  console.log('Emptied chore list')
   store.user = null
+  console.log('Set user to null')
   $('#chore-crud').addClass('hidden')
   // this restores the show chore button so it shows when the next user logs in.
   //   $('#show-chore-button').hide() is used in chores/ui.js
@@ -68,6 +77,9 @@ const signOutSuccess = () => {
   // don't click the button twice. This restores it upon logout.
   // it is still hidden because the the 'chore-crud' div that contains
   // the show-chore button is still hidden upon logout.
+
+  // Update: have moved the chore-crud div down so that it does not enclose the
+  // show chore feature. Temporarily shows. Can fix later.
   $('#show-chore-button').show()
   $('#sign-out-wrapper').addClass('hidden')
   $('#sign-up-wrapper').removeClass('hidden')
