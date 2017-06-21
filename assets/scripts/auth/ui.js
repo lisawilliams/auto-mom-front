@@ -56,7 +56,10 @@ const onSignInFailure = (response) => {
 // Sign out user
 
 const signOutSuccess = () => {
-  $('#chore-container').html('')
+  // $('#chore-container').html('')
+  // switching to .empty() here to see what happens
+  // $('#chore-container').empty()
+  // Tested the .empty. If you comment it out and
   store.user = null
   $('#chore-crud').addClass('hidden')
   // this restores the show chore button so it shows when the next user logs in.
