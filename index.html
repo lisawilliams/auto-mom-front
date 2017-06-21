@@ -84,13 +84,12 @@
    </div>
    </div>
 
-<!-- Moving the chore-crud div down so that it does not enclose the show-chore feature,
-only the create/update/delete forms -->
-<!-- <div id ="chore-crud" class ="hidden"-->
+
 
 <div class="container">
   <div class="row article">
   <div class="col-lg-12 col-md-12 col-sm-12col-xs-12">
+    <div id="show-chores-wrapper" class="hidden">
 <div class="show-all-chores-box">
       <h2>Show all chores</h2>
         <form id="show-chore">
@@ -101,6 +100,7 @@ only the create/update/delete forms -->
           </fieldset>
         </form>
       </div>
+    </div>
         <br><br><br>
 
 <!-- Using AJAX to return list of chores in the 'list' div -->

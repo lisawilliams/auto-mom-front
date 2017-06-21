@@ -43,6 +43,7 @@ const onSignInSuccess = (response) => {
   store.user = response.user
   resetForm($('#sign-in'))
   $('#chore-crud').removeClass('hidden')
+  $('#show-chores-wrapper').removeClass('hidden')
   $('#sign-out-wrapper').removeClass('hidden')
   $('#sign-up-wrapper').addClass('hidden')
   $('#sign-in-wrapper').addClass('hidden')
@@ -81,6 +82,7 @@ const signOutSuccess = () => {
   // Update: have moved the chore-crud div down so that it does not enclose the
   // show chore feature. Temporarily shows. Can fix later.
   $('#show-chore-button').show()
+  $('#show-chores-wrapper').addClass('hidden')
   $('#sign-out-wrapper').addClass('hidden')
   $('#sign-up-wrapper').removeClass('hidden')
   $('#sign-in-wrapper').removeClass('hidden')
