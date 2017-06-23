@@ -48,12 +48,6 @@ const onSignInSuccess = (response) => {
   $('#sign-up-wrapper').addClass('hidden')
   $('#sign-in-wrapper').addClass('hidden')
   $('#usermessages').text('You are signed in. Get ready to have organized chores!')
-  $('.create-chore-box').show()
-  $('.delete-chore-box').show()
-  $('.update-chore-box').show()
-  $('#show-chore-button').show()
-  $('.sign-up-box').hide()
-  $('.sign-in-box').hide()
 }
 
 const onSignInFailure = (response) => {
@@ -93,9 +87,6 @@ const signOutSuccess = () => {
   $('#sign-up-wrapper').removeClass('hidden')
   $('#sign-in-wrapper').removeClass('hidden')
   $('#usermessages').text('You are signed out. Thanks for visiting! Text your mama :)')
-  $('.create-chore-box').hide()
-  $('.delete-chore-box').hide()
-  $('.update-chore-box').hide()
 }
 
 const signOutFailure = (error) => {
