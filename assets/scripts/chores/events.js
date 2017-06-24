@@ -23,6 +23,8 @@ const onCreateChore = function (event) {
 
 // Show all of a user's chores
 
+// Show all of a user's chores
+
 const onShowAllChores = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
