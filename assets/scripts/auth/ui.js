@@ -68,9 +68,7 @@ const signOutSuccess = () => {
   // now trying to empty a div that's closer to the actual chore listing
   // targets div chore-list, which is in index.html
   $('#chore-list').empty()
-  console.log('Emptied chore list')
   store.user = null
-  console.log('Set user to null')
   $('#chore-crud').addClass('hidden')
   // this restores the show chore button so it shows when the next user logs in.
   //   $('#show-chore-button').hide() is used in chores/ui.js
