@@ -28,7 +28,6 @@ const onCreateChore = function (event) {
 const onShowAllChores = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log('This is store.chores in events.js before the api call is launched: ', store.chores)
   api.showAllChores()
     .then(ui.showChoreSuccess)
     .catch(ui.showChoreFailure)

@@ -47,7 +47,6 @@ const validateChoreShow = (response) => {
 }
 
 const showChoreSuccess = (response) => {
-  console.log('this is store.chores in chores/ui.js above $chore-list.show() ', store.chores)
   // store.chores returns an empty array -- [] -- if there are no chores
   // linter expects === but code fails if it is not ==
   if (store.chores == '') {
@@ -55,11 +54,9 @@ const showChoreSuccess = (response) => {
   } else {
     $('#chore-list').show()
     const showChoreList = showChoresTemplate({ chores: store.chores })
-    console.log('this is store.chores in chores/ui.js below const showChoreList: ', store.chores)
     $('#chore-list').append(showChoreList)
     $('#usermessages').text('Look at those chores! But do not worry, you got this.')
     $('#show-chore-button').hide()
-
   }
 }
 
