@@ -47,26 +47,30 @@ const validateChoreShow = (response) => {
 }
 
 const showChoreSuccess = (response) => {
-  $('#chore-list').show()
-  const showChoreList = showChoresTemplate({ chores: store.chores })
-  $('#chore-list').append(showChoreList)
-  $('#usermessages').text('Look at those chores! But do not worry, you got this.')
-  $('#show-chore-button').hide()
-  // may want to run a function here that automatically repopulates the list; check out Rory's solution to this
+  console.log('this is store.chores in chores/ui.js above $chore-list.show() ', store.chores)
+  // store.chores returns an empty array -- [] -- if there are no chores
+  // linter expects === but code fails if it is not ==
+  if (store.chores == '') {
+    $('#usermessages').text('You don\'t have any chores yet. How about adding some using Create A Chore below?')
+  } else {
+    $('#chore-list').show()
+    const showChoreList = showChoresTemplate({ chores: store.chores })
+    console.log('this is store.chores in chores/ui.js below const showChoreList: ', store.chores)
+    $('#chore-list').append(showChoreList)
+    $('#usermessages').text('Look at those chores! But do not worry, you got this.')
+    $('#show-chore-button').hide()
+
+  }
 }
 
 const showChoreFailure = (response) => {
   $('#usermessages').text('Hm. Showing all the chores failed. Try again?')
 }
-// In case there are already chores and a user clicks Show Chores twice
 
-const noShowChoreTwice = (response) => {
-  $('#usermessages').text('')
-}
 // In case user hasn't added any chores yet but clicks chore button
 
-const addSomeChores = (response) => {
-  $('#usermessages').text('You need to add some chores first!')
+const noChoresYet = (response) => {
+  $('#usermessages').text('You don\'t have any chores yet. How about adding some using Create A Chore below?')
 }
 
 // Chore Update
@@ -104,8 +108,7 @@ module.exports = {
   validateChoreShow,
   showChoreSuccess,
   showChoreFailure,
-  addSomeChores,
-  noShowChoreTwice,
+  noChoresYet,
   updateChoreSuccess,
   updateChoreFailure,
   deleteChoreSuccess,
