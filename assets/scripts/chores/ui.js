@@ -48,18 +48,10 @@ const validateChoreShow = (response) => {
 
 const showChoreSuccess = (response) => {
   $('#chore-list').show()
-  console.log('this is right after chore-list show() in chores/ui.js but before the showChoreListfunction')
   const showChoreList = showChoresTemplate({ chores: store.chores })
   $('#chore-list').append(showChoreList)
-  console.log('This is after chore-list .append()')
   $('#usermessages').text('Look at those chores! But do not worry, you got this.')
-  console.log('This is right before we do the .hide() on show-chore-button')
   $('#show-chore-button').hide()
-  console.log('This is right after we use .hide() on the show chore button. The show chore button should not be showing. Chores should be showing.')
-  console.log('This is the current user')
-  console.log(store.user)
-  console.log('This is the chore object for the current user')
-  console.log(store.chores)
   // may want to run a function here that automatically repopulates the list; check out Rory's solution to this
 }
 
