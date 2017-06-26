@@ -251,6 +251,12 @@ Below are the formal project requirements for the Full Stack project.
 -   Be **deployed online**, so that it is accessible to the public *YES*
 -   Be linked in your `pinned repositories` on your GitHub profile page *YES*
 
+## Resubmission
+
+- Hide CRUD actions from users until logged in *DONE*
+- Item ownership -- change controllers to ensure one user can't perform
+  crud actions on another user's chores *DONE*
+
 ### Your app must not
 
 -   Have any obvious user-facing errors *NEED TESTING*
@@ -268,6 +274,9 @@ additional goals that you can shoot for:
 
 ## Future
 
+- Have started a branch to experiment with using a third-party API (quotes.rest)
+- This was not part of the project submittal! 
+
 
 ### Must have
 
@@ -275,10 +284,6 @@ additional goals that you can shoot for:
 * User-facing error messages for auth problems *YES*
 * User-facing error messages for chore-CRUD action problems *YES*
 
-### Nice to have
-
-* Dependent-destroy chores when a user is gone.
-* Hide/show auth from user at appropriate points.
 
 ## Questions:
 

@@ -12,9 +12,20 @@ mental space for more important things, like choosing which fandom to get into
 as a family. Buffy? Dr. Who? With AutoMom, you decide, because you're not
 wasting time figuring out who does what when.
 
+## Link to Live, Deployed AutoMom App
+
+[AutoMom Deployed App](https://lisawilliams.github.io/auto-mom-front/)
+
+## Link to Front And Back End Repositories
+
+[AutoMom Front End](https://github.com/lisawilliams/auto-mom-front)
+
+[AutoMom Back End](https://github.com/lisawilliams/auto-mom-back)
+
 ## What AutoMom Does And How It Works
 
-AutoMom is a client-server application with a Javascript front end and a Rails backend. The front end communicates with the server via an API.
+AutoMom is a client-server application with a Javascript front end and a Rails
+backend. The front end communicates with the server via an API.
 
 ## The AutoMom Front End (Client)
 
@@ -31,21 +42,9 @@ sign out, change password). It is a fully functional CRUD application.
 ## The AutoMom Back End (Server)
 
 The AutoMom back end is a Rails application which supports RESTful requests
-from the AutoMom client. The API for the back-end application are:
+from the AutoMom client.
 
-### API end-points
-
-| Verb   | URI Pattern            | Controller#Action |
-|--------|------------------------|-------------------|
-| POST   | `/sign-up`             | `users#signup`    |
-| POST   | `/sign-in`             | `users#signin`    |
-| DELETE | `/sign-out/:id`        | `users#signout`   |
-| PATCH  | `/change-password/:id` | `users#changepw`  |
-| GET    | `/chores`              | `chores#index`    |
-| POST   | `/chores`              | `chores#create`   |
-| GET    | `/chores/:id`          | `chores#show`     |
-| PATCH  | `/chores/:id`          | `chores#update`   |
-| DELETE | `/chores/:id`          | `chores#delete`   |
+### Databases and Tables
 
 The backend uses a Postgres database to store user information. In communicating
 with the database, I did not set up tables or joins directly; I used the Rails ORM to do that.
@@ -53,6 +52,21 @@ with the database, I did not set up tables or joins directly; I used the Rails O
 The app currently has two tables -- one for users, and one for chores. I created
 a migration to create a foreign key on the chores table to link individual chores
 with their users.
+
+There are two active tables, users and chores.
+
+The `user` has id and email, and also stores the token, password hash, and timestamps
+for when a user record was created and updated.
+
+The `chores` table has a chore ID, name of chore, description, day of week, and
+two columns with timestamps for when a chore record was created and updated.
+
+### Entity Relationship Diagram
+
+Users ----|----< Chores
+
+A user has many chores.
+
 
 ## Approach to building AutoMom
 
@@ -83,11 +97,18 @@ followed for each resource I built. Here's an example:
 
 (To see my complete project checklist, see [AutoMom Project Checklist](https://github.com/lisawilliams/auto-mom-front/blob/master/checklist.md))
 
+## Issues I Encountered
+
 One of the places where I struggled the most was in creating a foreign key on the chores
 table. I generated a migration file using Rails -- but I did it twice. After deleting one,
 I found that Rails was looking for the one I deleted! Jordan A. helped me recover the deleted
 migration file via Git, and once that was done, it worked. Lesson: don't run `bin/rails db:migrate` twice
 without checking first.
+
+I also realized that applying show(), hide() and empty() to divs in response to user
+behavior could get pretty confusing if you weren't careful about how divs were nested.
+Next time I intend to plan out divs first, keeping them as minimal as possible and making
+nesting simpler and more obvious for me, to make it easier for me to target them.
 
 ## User Stories
 
@@ -105,13 +126,3 @@ without checking first.
 ## Wireframes
 
 [Here is a link to a wireframe I drew for AutoMom](https://github.com/lisawilliams/auto-mom-front/blob/development/Auto-Mom-Wireframe.jpg).
-
-## Link to Live, Deployed AutoMom App
-
-[AutoMom Deployed App](https://lisawilliams.github.io/auto-mom-front/)
-
-## Link to Front And Back End Repositories
-
-[AutoMom Front End](https://github.com/lisawilliams/auto-mom-front)
-
-[AutoMom Back End](https://github.com/lisawilliams/auto-mom-back)
